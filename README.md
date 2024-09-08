@@ -9,7 +9,8 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - [Books](#books)
 - [Solvers](#solvers)
 - [Other Software](#software)
-- [courses and Lectures](#courses)
+- [Research](#research)
+- [Courses and Lectures](#courses)
 - [Other Resources](#other)
 
 
@@ -27,7 +28,7 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - Donald Knuth TAOCP 7.2.2.2. Satisfiability (available online) (https://www.inf.ufrgs.br/~mrpritt/lib/exe/fetch.php?media=inf5504:7.2.2.2-satisfiability.pdf)
 
 ## Solvers
-### SAT solvers
+### SAT Solvers
 - GRASP (1996)
   - paper: https://www.cs.cmu.edu/~emc/15-820A/reading/grasp_iccad96.pdf
 - Chaff (2001)
@@ -42,14 +43,19 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - Glucose (2009)
   - code: https://github.com/audemard/glucose
   - paper: https://univ-artois.hal.science/hal-03299473/file/preprint.pdf
- 
-### SMT solvers
+- Lingeling (2010) https://fmv.jku.at/lingeling/
+- PicoSAT (2010) https://fmv.jku.at/picosat/
+- MergeSAT (2021) https://github.com/conp-solutions/mergesat
+- CaDiCaL (2024) https://github.com/arminbiere/cadical
+
+  
+### SMT Solvers
 
 - Z3 https://github.com/Z3Prover/z3
 - cvc5 https://cvc5.github.io/
 - Bitwuzla (successor to Boolector) https://github.com/bitwuzla/bitwuzla
 
-### CSP solvers
+### CSP Solvers
 
 - GeCode https://www.gecode.org/
 
@@ -59,23 +65,24 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - PySAT (Python) https://pysathq.github.io/
 - Sat4j (Java) http://www.sat4j.org/
 
-### high level modelling languages 
+### High Level Modelling Languages 
 
 - MiniZinc (Optimisation) https://www.minizinc.org/
 - Alloy (Software verification) https://alloytools.org/
 - ORTools (Optimisation) https://developers.google.com/optimization/cp/cp_solver
 
-## Modelling, theory and research
+## Research
+
+### Encoding Problems in SAT
+ 
+- Arithmetic operations https://yurichev.com/mirrors/SAT_factor/Encoding%20Basic%20Arithmetic%20Operations%20for%20SAT-Solvers.pdf
+
 
 ### CSP
 - CSP modelling https://www.gecode.org/doc-latest/MPG.pdf
 - intro to CSP theory (Constraint Propagation - Models, Techniques, Implementation) https://www.gecode.org/papers/Tack_PhD_2009.pdf
 
-### encoding problems in SAT
- 
-- Arithmetic operations https://yurichev.com/mirrors/SAT_factor/Encoding%20Basic%20Arithmetic%20Operations%20for%20SAT-Solvers.pdf
-
-###  related areas
+###  Related Areas
 
 - [MaxSAT](https://en.wikipedia.org/wiki/Maximum_satisfiability_problem) 
 - [Quantified Boolean Formula (QBF)](https://en.wikipedia.org/wiki/True_quantified_Boolean_formula)
