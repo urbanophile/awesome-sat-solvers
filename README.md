@@ -17,12 +17,12 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 ## Tutorials 
 
 - Basic interactive tutorial on a SAT, DPLL, and CDCL https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/
-- MiniZinc tutorial https://docs.minizinc.dev/en/stable/part_2_tutorial.html
+- MiniZinc tutorial - takes you through solving combinatorial optimisation problems with MiniZinc - https://docs.minizinc.dev/en/stable/part_2_tutorial.html
 - Tutorial introduction to Z3 in Python https://theory.stanford.edu/~nikolaj/programmingz3.html
 
 ## Books 
 
-- The Calculus of Computations https://theory.stanford.edu/~arbrad/book.html
+- The Calculus of Computations - covers the logic theory background - https://theory.stanford.edu/~arbrad/book.html
 - Decision Procedures: An Algorithmic Point of View http://www.decision-procedures.org/
 - SAT/SMT by Example (free! available online!) https://smt.st/SAT_SMT_by_example.pdf 
 - Donald Knuth TAOCP 7.2.2.2. Satisfiability (available online) (https://www.inf.ufrgs.br/~mrpritt/lib/exe/fetch.php?media=inf5504:7.2.2.2-satisfiability.pdf)
@@ -34,7 +34,7 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - Chaff (2001)
   - code: http://www.princeton.edu/~chaff/zchaff.html
   - paper: https://www.princeton.edu/~chaff/publication/DAC2001v56.pdf
-- MiniSAT(2003)
+- MiniSAT(2003) - A very important solver which introduced a number of heuristics 
   - code: https://github.com/niklasso/minisat
   - paper: 
 - CryptoMiniSAT (2009)
@@ -45,6 +45,7 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
   - paper: https://univ-artois.hal.science/hal-03299473/file/preprint.pdf
 - Lingeling (2010) https://fmv.jku.at/lingeling/
 - PicoSAT (2010) https://fmv.jku.at/picosat/
+- Slime - https://github.com/maxtuno/slime-sat-solver/
 - MergeSAT (2021) https://github.com/conp-solutions/mergesat
 - CaDiCaL (2024) https://github.com/arminbiere/cadical
 
@@ -57,7 +58,9 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 
 ### CSP Solvers
 
-- GeCode https://www.gecode.org/
+- GeCode - good documentation and overview of the code - https://www.gecode.org/
+- Sugar - Solving by reduction to SAT -  https://cspsat.gitlab.io/sugar/
+- Picat - http://picat-lang.org/
 
 ## Software
 ### Libraries
