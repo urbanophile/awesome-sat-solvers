@@ -96,7 +96,10 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 
 - Constraint Satisfaction https://www.coursera.org/learn/basic-modeling
 
-## Other Resources
+## Other
 - SAT Competition https://satcompetition.github.io/
 - MiniZinc Competition https://www.minizinc.org/challenge/2023/results/
-
+- LP/CP programming contest https://lpcp-contest.github.io/
+- MaxSAT competition https://maxsat-evaluations.github.io/
+- Model count competition  https://mccompetition.org/
+- QBF competition (more irregular) https://qbf23.pages.sai.jku.at/gallery/
