@@ -11,14 +11,16 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - [Other Software](#software)
 - [Research](#research)
 - [Courses and Lectures](#courses)
+- [Competitions](#competitions)
 - [Other Resources](#other)
 
 
 ## Tutorials 
 
-- Basic interactive tutorial on a SAT, DPLL, and CDCL https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/
+- Basic interactive tutorial on a SAT, DPLL, and CDCL - https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/
 - MiniZinc tutorial - takes you through solving combinatorial optimisation problems with MiniZinc - https://docs.minizinc.dev/en/stable/part_2_tutorial.html
-- Tutorial introduction to Z3 in Python https://theory.stanford.edu/~nikolaj/programmingz3.html
+- Tutorial introduction to Z3 in Python  - https://theory.stanford.edu/~nikolaj/programmingz3.html
+- Modern SAT solvers: fast, neat and underused (part 1 of N) - https://codingnest.com/modern-sat-solvers-fast-neat-underused-part-1-of-n/
 
 ## Books 
 
@@ -58,10 +60,12 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 
 ### CSP Solvers
 
-- GeCode - good documentation and overview of the code - https://www.gecode.org/
+- GeCode - C++ based - good documentation and overview of the code - https://www.gecode.org/
 - Sugar - Solving by reduction to SAT -  https://cspsat.gitlab.io/sugar/
-- Picat - http://picat-lang.org/
-
+- Picat - logic programming-based - http://picat-lang.org/
+- Choco - Java-based - https://choco-solver.org/
+- OptaPlanner - Java-based - https://www.optaplanner.org/
+  
 ## Software
 ### Libraries
 
@@ -75,15 +79,20 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - ORTools (Optimisation) https://developers.google.com/optimization/cp/cp_solver
 
 ## Research
+Overviews
+
+- The Silent (R)evolution of SAT - https://cacm.acm.org/research/the-silent-revolution-of-sat/
 
 ### Encoding Problems in SAT
- 
+
+- Successful SAT encoding techniques  https://content.iospress.com/download/journal-on-satisfiability-boolean-modeling-and-computation/sat190085?id=journal-on-satisfiability-boolean-modeling-and-computation%2Fsat190085
 - Arithmetic operations https://yurichev.com/mirrors/SAT_factor/Encoding%20Basic%20Arithmetic%20Operations%20for%20SAT-Solvers.pdf
 
+### Heuristics 
 
 ### CSP
-- CSP modelling https://www.gecode.org/doc-latest/MPG.pdf
-- intro to CSP theory (Constraint Propagation - Models, Techniques, Implementation) https://www.gecode.org/papers/Tack_PhD_2009.pdf
+- CSP modelling -  https://www.gecode.org/doc-latest/MPG.pdf
+- intro to CSP theory (Constraint Propagation - Models, Techniques, Implementation)  - https://www.gecode.org/papers/Tack_PhD_2009.pdf
 
 ###  Related Areas
 
@@ -96,10 +105,14 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 
 - Constraint Satisfaction https://www.coursera.org/learn/basic-modeling
 
-## Other
+## Competitions
 - SAT Competition https://satcompetition.github.io/
 - MiniZinc Competition https://www.minizinc.org/challenge/2023/results/
 - LP/CP programming contest https://lpcp-contest.github.io/
 - MaxSAT competition https://maxsat-evaluations.github.io/
 - Model count competition  https://mccompetition.org/
 - QBF competition (more irregular) https://qbf23.pages.sai.jku.at/gallery/
+
+  ## Other
+
+  - DIMACS file format - https://jix.github.io/varisat/manual/0.2.0/formats/dimacs.html
