@@ -23,6 +23,7 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - Modern SAT solvers: fast, neat and underused (part 1 of N) - https://codingnest.com/modern-sat-solvers-fast-neat-underused-part-1-of-n/
 - SAT/SMT school https://www.satassociation.org/sat-smt-school.html
 - SAT tutorials  https://www.satassociation.org/tutorials.html
+- LogicNG tutorial https://logicng.org/tutorial/
 
 ## Books 
 
@@ -62,6 +63,10 @@ SAT has a nice tradition of making solver public and open source. As Yogi Berra 
 - MergeSAT (2021) https://github.com/conp-solutions/mergesat
 - CaDiCaL (2024) https://github.com/arminbiere/cadical
 
+### MaxSAT Solvers
+
+### #SAT Solvers
+
   
 ### SMT Solvers
 SMT solvers are generally built on top of SAT solvers and solver more complex problems. 
@@ -77,7 +82,14 @@ CSP solvers differ from SAT solvers but the communities overlap, and techniques 
 - Picat - logic programming-based - http://picat-lang.org/
 - Choco - Java-based - https://choco-solver.org/
 - OptaPlanner - Java-based - https://www.optaplanner.org/
-  
+
+### Analysis of Solver Performance
+
+- The SAT Museum - https://ceur-ws.org/Vol-3545/paper6.pdf
+- Assessing Progress in SAT Solvers Through the Lens of Incremental SAT https://alexeyignatiev.github.io/assets/pdf/kims-sat21-preprint.pdf
+- SAT: Disruption, Demise & Resurgence http://www.pragmaticsofssat.org/2019/disruption.pdf
+
+
 ## Software
 ### Libraries
 
@@ -89,6 +101,9 @@ CSP solvers differ from SAT solvers but the communities overlap, and techniques 
 - MiniZinc (Optimisation) https://www.minizinc.org/
 - Alloy (Software verification) https://alloytools.org/
 - ORTools (Optimisation) https://developers.google.com/optimization/cp/cp_solver
+
+### Verification of proofs
+
 
 ## Research
 Overviews
@@ -104,14 +119,24 @@ Overviews
 
 ### Heuristics 
 
+### Computational Complexity
+
+### Logic and Proof Complexity
+
 ### CSP
 - CSP modelling -  https://www.gecode.org/doc-latest/MPG.pdf
 - intro to CSP theory (Constraint Propagation - Models, Techniques, Implementation)  - https://www.gecode.org/papers/Tack_PhD_2009.pdf
 
 ###  Related Areas
 
-- [MaxSAT](https://en.wikipedia.org/wiki/Maximum_satisfiability_problem) 
+### Next Door
+- [MUS](https://github.com/meelgroup/muser) (see also FSAT)
+- [MaxSAT](https://en.wikipedia.org/wiki/Maximum_satisfiability_problem)
+- [SharpSAT](https://github.com/marcthurley/sharpSAT)
+- [Pseudo-boolean Constraints](https://jakobnordstrom.se/docs/presentations/TalkPseudoBooleanSolvingSimons2103.pdf) 
 - [Quantified Boolean Formula (QBF)](https://en.wikipedia.org/wiki/True_quantified_Boolean_formula)
+
+### Same Neighbourhood
 - [Constraint Satisfaction Problems (CSP)](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem)
 - [Integer Programming (IP/ILP/MILP)](https://en.wikipedia.org/wiki/Integer_programming)
 
