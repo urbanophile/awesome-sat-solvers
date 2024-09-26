@@ -17,22 +17,22 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 
 ## Tutorials 
 
-- Basic interactive tutorial on a SAT, DPLL, and CDCL - https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/
+- [Basic interactive tutorial on a SAT, DPLL, and CDCL](https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/)
 - MiniZinc tutorial - takes you through solving combinatorial optimisation problems with MiniZinc - https://docs.minizinc.dev/en/stable/part_2_tutorial.html
 - Tutorial introduction to Z3 in Python  - https://theory.stanford.edu/~nikolaj/programmingz3.html
 - Modern SAT solvers: fast, neat and underused (part 1 of N) - https://codingnest.com/modern-sat-solvers-fast-neat-underused-part-1-of-n/
 - SAT/SMT school https://www.satassociation.org/sat-smt-school.html
-- SAT tutorials  https://www.satassociation.org/tutorials.html
-- LogicNG tutorial https://logicng.org/tutorial/
+- [SAT tutorials from SAT association](https://www.satassociation.org/tutorials.html)
+- [LogicNG tutorial](https://logicng.org/tutorial/)
 
 ## Books 
 
 - The Calculus of Computations - covers the logic theory background - https://theory.stanford.edu/~arbrad/book.html
 - Decision Procedures: An Algorithmic Point of View http://www.decision-procedures.org/
-- SAT/SMT by Example (free! available online!) https://smt.st/SAT_SMT_by_example.pdf 
-- Donald Knuth TAOCP 7.2.2.2. Satisfiability (available online) (https://www.inf.ufrgs.br/~mrpritt/lib/exe/fetch.php?media=inf5504:7.2.2.2-satisfiability.pdf)
+- [SAT/SMT by Example](https://smt.st/SAT_SMT_by_example.pdf) (free! available online!)  
+- Donald Knuth [TAOCP 7.2.2.2. Satisfiability](https://www.inf.ufrgs.br/~mrpritt/lib/exe/fetch.php?media=inf5504:7.2.2.2-satisfiability.pdf) (available online) 
 - Handbook of Satisfiability (comprehensive and very useful)
-  -  CH 1  A History of Satisfiability https://satassociation.org/articles/FAIA185-0003.pdf
+  -  CH 1 A History of Satisfiability https://satassociation.org/articles/FAIA185-0003.pdf
   -  CH 2 CNF Encodings https://www.researchgate.net/profile/Steven-Prestwich/publication/242029085_CNF_encodings/links/5bcf17e992851c1816ba9092/CNF-encodings.pdf
   -  CH 3 Complete Algorithms https://ics.uci.edu/~dechter/courses/SATChapter3.pdf
   -  CH 4 Conflict-Driven Clause Learning SAT Solvers https://www.satassociation.org/articles/FAIA185-0131.pdf
@@ -43,7 +43,7 @@ SAT has a nice tradition of making solver public and open source. As Yogi Berra 
 
 ### SAT Solvers
 - GRASP (1996) -  GRASP pioneered the modern approach of CDCL. 
-  - code: https://github.com/satmuseum/grasp
+  - [code](https://github.com/satmuseum/grasp)
   - paper: https://www.cs.cmu.edu/~emc/15-820A/reading/grasp_iccad96.pdf
 - Chaff (2001) - Chaff introduced important data structures and heuristics.
   - code: http://www.princeton.edu/~chaff/zchaff.html
@@ -63,16 +63,28 @@ SAT has a nice tradition of making solver public and open source. As Yogi Berra 
 - MergeSAT (2021) https://github.com/conp-solutions/mergesat
 - CaDiCaL (2024) https://github.com/arminbiere/cadical
 
-### MaxSAT Solvers
+### MaxSAT Solvers and MUS Extracters 
 
-### #SAT Solvers
+MaxSAT is the problem of the finding the maximum number of clauses which can be satisfied for a particular formula
+Minimally Unsatisfiable Subformulas are like duals MaxSAT, they ask for the minimal set of assignments which will show a formula is unsatisfiable.
+
+
+- [Loandra](https://github.com/jezberg/loandra) (MaxSAT)
+- [MUSer](https://github.com/meelgroup/muser) (MUSer)
+
+### SharpSAT (#SAT) Solvers
+
+The #SAT is the problem of counting all the assignments which satisfy a Boolean formula.
+
+- [ApproxMCv6](https://github.com/meelgroup/approxmc) (by creators of CryptoMiniSAT)
+- [SharpSAT](https://github.com/marcthurley/sharpSAT) (sota circa 2011)
 
   
 ### SMT Solvers
 SMT solvers are generally built on top of SAT solvers and solver more complex problems. 
-- Z3 https://github.com/Z3Prover/z3
-- cvc5 https://cvc5.github.io/
-- Bitwuzla (successor to Boolector) https://github.com/bitwuzla/bitwuzla
+- [Z3](https://github.com/Z3Prover/z3)
+- [cvc5](https://cvc5.github.io/)
+- [Bitwuzla](https://github.com/bitwuzla/bitwuzla) (successor to Boolector) 
 
 ### CSP Solvers
 CSP solvers differ from SAT solvers but the communities overlap, and techniques from CSP have proven very important in SAT e.g. Boolean Constraint Propagation.
@@ -130,9 +142,8 @@ Overviews
 ###  Related Areas
 
 ### Next Door
-- [MUS](https://github.com/meelgroup/muser) (see also FSAT)
 - [MaxSAT](https://en.wikipedia.org/wiki/Maximum_satisfiability_problem)
-- [SharpSAT](https://github.com/marcthurley/sharpSAT)
+- [#SAT](https://en.wikipedia.org/wiki/Sharp-SAT)
 - [Pseudo-boolean Constraints](https://jakobnordstrom.se/docs/presentations/TalkPseudoBooleanSolvingSimons2103.pdf) 
 - [Quantified Boolean Formula (QBF)](https://en.wikipedia.org/wiki/True_quantified_Boolean_formula)
 
@@ -142,7 +153,7 @@ Overviews
 
 ## Courses 
 
-- Constraint Satisfaction https://www.coursera.org/learn/basic-modeling
+- Constraint Satisfaction https://www.coursera.org/learn/basic-modeling @Monash via Coursera
 
 ## Competitions
 - SAT Competition https://satcompetition.github.io/
