@@ -17,22 +17,22 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 
 ## Tutorials 
 
-- [Basic interactive tutorial on a SAT, DPLL, and CDCL](https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/)
-- MiniZinc tutorial - takes you through solving combinatorial optimisation problems with MiniZinc - https://docs.minizinc.dev/en/stable/part_2_tutorial.html
-- Tutorial introduction to Z3 in Python  - https://theory.stanford.edu/~nikolaj/programmingz3.html
-- Modern SAT solvers: fast, neat and underused (part 1 of N) - https://codingnest.com/modern-sat-solvers-fast-neat-underused-part-1-of-n/
-- SAT/SMT school https://www.satassociation.org/sat-smt-school.html
+- [Conflict Driven Clause Learning](https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/) - Basic interactive tutorial on a SAT, DPLL, and CDCL
+- [MiniZinc tutorial](https://docs.minizinc.dev/en/stable/part_2_tutorial.html) - takes you through solving combinatorial optimisation problems with MiniZinc
+- [Tutorial introduction to Z3 in Python](https://theory.stanford.edu/~nikolaj/programmingz3.html)  - Short intro to using the z3 python bindings
+- [Modern SAT solvers: fast, neat and underused (part 1 of N)](https://codingnest.com/modern-sat-solvers-fast-neat-underused-part-1-of-n/) - Popular blog series introducing SAT
+- [SAT/SMT school from SAT association](https://www.satassociation.org/sat-smt-school.html) 
 - [SAT tutorials from SAT association](https://www.satassociation.org/tutorials.html)
 - [LogicNG tutorial](https://logicng.org/tutorial/)
 - [Simons Workshop SAT bootcamp](https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond-boot-camp/schedule#simons-tabs)
-- "Theoretical Foundations of Applied SAT Solving" workshop 2014.
+- [Theoretical Foundations of Applied SAT Solving](https://www.birs.ca/events/2014/5-day-workshops/14w5101)  Workshop from 2014 with many useful videos.
 
 ## Books 
 
 - [The Calculus of Computations](https://theory.stanford.edu/~arbrad/book.html) - covers the logic theory background
-- [Decision Procedures: An Algorithmic Point of View](http://www.decision-procedures.org/)
+- [Decision Procedures: An Algorithmic Point of View](http://www.decision-procedures.org/) - Great, practical book focusing on the algorithms of SAT and SMT. Strongly recommended.
 - [SAT/SMT by Example](https://smt.st/SAT_SMT_by_example.pdf) (free! available online!)  
-- Donald Knuth [TAOCP 7.2.2.2. Satisfiability](https://www.inf.ufrgs.br/~mrpritt/lib/exe/fetch.php?media=inf5504:7.2.2.2-satisfiability.pdf) (available online) 
+- [The Art of Computer Programming - Satisfiability](https://www.inf.ufrgs.br/~mrpritt/lib/exe/fetch.php?media=inf5504:7.2.2.2-satisfiability.pdf) (available online) Donald Knuth's famous book's section on SAT. 
 - Handbook of Satisfiability (comprehensive and very useful)
   -  [CH 1 A History of Satisfiability](https://satassociation.org/articles/FAIA185-0003.pdf)
   -  [CH 2 CNF Encodings](https://www.researchgate.net/profile/Steven-Prestwich/publication/242029085_CNF_encodings/links/5bcf17e992851c1816ba9092/CNF-encodings.pdf)
@@ -47,16 +47,16 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 SAT has a nice tradition of making solver public and open source. As Yogi Berra said "You can observe a lot by watchin". Three very important whose source code is informative to read are GRASP, Chaff and MiniSAT. 
 
 ### SAT Solvers
-- WalkSAT (1994) local search https://gitlab.com/HenryKautz/Walksat https://henrykautz.com/walksat/index.html
+- WalkSAT (1994) local search [code](https://gitlab.com/HenryKautz/Walksat) [project page](https://henrykautz.com/walksat/index.html)
 - GRASP (1996) -  GRASP pioneered the modern approach of CDCL. 
   - [code](https://github.com/satmuseum/grasp)
-  - paper: https://www.cs.cmu.edu/~emc/15-820A/reading/grasp_iccad96.pdf
+  - [paper](https://www.cs.cmu.edu/~emc/15-820A/reading/grasp_iccad96.pdf)
 - Chaff (2001) - Chaff introduced important data structures and heuristics.
-  - code: http://www.princeton.edu/~chaff/zchaff.html
-  - paper: https://www.princeton.edu/~chaff/publication/DAC2001v56.pdf
+  - [code](http://www.princeton.edu/~chaff/zchaff.html)
+  - [paper](https://www.princeton.edu/~chaff/publication/DAC2001v56.pdf)
 - MiniSAT(2003) - Famous for being good, short (2k LOC), and introducing incremental SAT, MiniSAT is still widely used.
-  - code: https://github.com/niklasso/minisat
-  - paper: http://minisat.se/downloads/MiniSat.pdf (Clear and worth reading!) 
+  - [code](https://github.com/niklasso/minisat)
+  - [paper](http://minisat.se/downloads/MiniSat.pdf) (Clear and worth reading!) 
 - CryptoMiniSAT (2009) - CryptoMiniSAT 
   - code: https://github.com/msoos/cryptominisat
   - paper: https://www.msoos.org/wordpress/wp-content/uploads/2011/03/Extending_SAT_2009.pdf
@@ -137,6 +137,8 @@ CSP solvers differ from SAT solvers but the communities overlap, and techniques 
 - ORTools (Optimisation) https://developers.google.com/optimization/cp/cp_solver
 
 ### Verification of proofs
+
+- [DRAT-Trim](https://github.com/marijnheule/drat-trim) - verifier of proofs of unsatisfiability (UNSAT)
 
 
 ## Research
