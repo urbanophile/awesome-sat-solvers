@@ -40,8 +40,15 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
   -  [CH 4 Conflict-Driven Clause Learning SAT Solvers](https://www.satassociation.org/articles/FAIA185-0131.pdf)
   -  [CH 5 Look-Ahead Based SAT Solvers (1st Ed.) ](https://www.cs.cmu.edu/~mheule/publications/p01c05_lah.pdf)
   -  [CH 6 Incomplete Algorithms](https://www.cs.cornell.edu/~sabhar/chapters/IncompleteAlg-SAT-Handbook-prelim.pdf)
+  -  [CH 7 Proof Complexity and SAT Solving](https://jakobnordstrom.se/docs/publications/ProofComplexityChapter.pdf)
+  -  [CH 8 Fundaments of Branching Heuristics](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=027282e993a97cad07797a980c32b0bc83f61989)
   -  [CH 9 Preprocessing in SAT Solving  (2nd Ed.)](https://cca.informatik.uni-freiburg.de/papers/BiereJarvisaloKiesl-SAT-Handbook-2021-Preprocessing-Chapter-Manuscript.pdf)
-  -  [CH 14 Bound Model Checking](https://www.satassociation.org/articles/FAIA185-0457.pdf)
+  -  [CH 10 Random Satisfiability (2nd Ed.)](https://cgi.di.uoa.gr/~optas/papers/handbook.pdf)
+  -  [CH 14 Bound Model Checking (1st Ed.)](https://www.satassociation.org/articles/FAIA185-0457.pdf)
+  -  [CH 15 Proofs of Unsatisfiability (2nd Ed.)](https://www.cs.cmu.edu/~mheule/publications/p01c15-prf.pdf) 
+  -  [CH 23 MaxSAT, Hard and Soft Constraints (2nd Ed.)](https://www.iiia.csic.es/media/filer_public/eb/1c/eb1c1fff-ecb8-4279-aa51-810cb5f3dbc8/p02c23-max.pdf)
+  -  [CH 19 Planning and SAT](https://users.aalto.fi/~rintanj1/papers/p02c19-pla.pdf)
+  -  [CH -2 SMT (1st Ed.)](https://homepage.cs.uiowa.edu/~tinelli/papers/BarSST-09.pdf)
 
 ## Solvers
 SAT has a nice tradition of making solver public and open source. As Yogi Berra said "You can observe a lot by watchin". Three very important whose source code is informative to read are GRASP, Chaff and MiniSAT. 
@@ -64,13 +71,16 @@ SAT has a nice tradition of making solver public and open source. As Yogi Berra 
   - code: https://github.com/audemard/glucose
   - paper: https://univ-artois.hal.science/hal-03299473/file/preprint.pdf
 - Lingeling (2010) https://fmv.jku.at/lingeling/
-- PicoSAT (2010) https://fmv.jku.at/picosat/
-- Slime - https://github.com/maxtuno/slime-sat-solver/
+- PicoSAT (2010) [website](https://fmv.jku.at/picosat/)
+- Slime - [code](https://github.com/maxtuno/slime-sat-solver/)
 - MergeSAT (2021) https://github.com/conp-solutions/mergesat
 - CaDiCaL (2024) https://github.com/arminbiere/cadical
 - Kissat (2020) https://github.com/arminbiere/kissat
 
-- Satch (expository) https://github.com/arminbiere/satch
+
+- Satch  https://github.com/arminbiere/satch (expository solver by Armin Biere)
+- [gopher](https://github.com/crillab/gophersat) go
+- [varisat](https://github.com/jix/varisat)  rust
 
 ### Analyses of SAT Solver Performance
 
@@ -172,6 +182,12 @@ Relating Proof Complexity Measures and Practical Hardness of SAT https://jakobno
 
 - cube-and-conquer https://www.cs.utexas.edu/~marijn/publications/cube.pdf
 
+
+### Machine Learning 
+
+-
+
+
 ### Problems
 
 - ‘SATLIB - Benchmark Problems’. https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html
@@ -193,8 +209,10 @@ Relating Proof Complexity Measures and Practical Hardness of SAT https://jakobno
 
 #### CSP
 - CSP modelling -  https://www.gecode.org/doc-latest/MPG.pdf
-- intro to CSP theory (Constraint Propagation - Models, Techniques, Implementation)  - https://www.gecode.org/papers/Tack_PhD_2009.pdf
+- [ (Constraint Propagation - Models, Techniques, Implementation)](https://www.gecode.org/papers/Tack_PhD_2009.pdf)  - intro to CSP theory
 
+#### ILP
+- [Branch-and-bound algorithms: A survey of recent advances in searching, branching, and pruning](https://www.sciencedirect.com/science/article/pii/S1572528616000062)
 
 ## Courses 
 
