@@ -40,31 +40,21 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 SAT has a nice tradition of making solver public and open source. As Yogi Berra said "You can observe a lot by watchin". Three very important whose source code is informative to read are GRASP, Chaff and MiniSAT. 
 
 ### SAT Solvers
-- WalkSAT (1994) local search [code](https://gitlab.com/HenryKautz/Walksat) [project page](https://henrykautz.com/walksat/index.html)
-- GRASP (1996) -  GRASP pioneered the modern approach of CDCL. 
-  - [code](https://github.com/satmuseum/grasp)
-  - [paper](https://www.cs.cmu.edu/~emc/15-820A/reading/grasp_iccad96.pdf)
-- Chaff (2001) - Chaff introduced important data structures and heuristics.
-  - [code](http://www.princeton.edu/~chaff/zchaff.html)
-  - [paper](https://www.princeton.edu/~chaff/publication/DAC2001v56.pdf)
-- MiniSAT(2003) - Famous for being good, short (2k LOC), and introducing incremental SAT, MiniSAT is still widely used.
-  - [code](https://github.com/niklasso/minisat)
-  - [paper](http://minisat.se/downloads/MiniSat.pdf) (Clear and worth reading!) 
-- CryptoMiniSAT (2009) - CryptoMiniSAT 
-  - code: https://github.com/msoos/cryptominisat
-  - paper: https://www.msoos.org/wordpress/wp-content/uploads/2011/03/Extending_SAT_2009.pdf
-- Glucose (2009). Introduced different heuristics for SAT and UNSAT.
-  - code: https://github.com/audemard/glucose
-  - paper: https://univ-artois.hal.science/hal-03299473/file/preprint.pdf
-- Lingeling (2010) https://fmv.jku.at/lingeling/
-- PicoSAT (2010) [website](https://fmv.jku.at/picosat/)
-- Slime - [code](https://github.com/maxtuno/slime-sat-solver/)
-- MergeSAT (2021) https://github.com/conp-solutions/mergesat
-- CaDiCaL (2024) https://github.com/arminbiere/cadical
-- Kissat (2020) https://github.com/arminbiere/kissat
+- WalkSAT (1994) - local search - [code](https://gitlab.com/HenryKautz/Walksat) | [project page](https://henrykautz.com/walksat/index.html)
+- GRASP (1996) -  GRASP pioneered the modern approach of CDCL. - [code](https://github.com/satmuseum/grasp) | [paper](https://www.cs.cmu.edu/~emc/15-820A/reading/grasp_iccad96.pdf)
+- Chaff (2001) - Chaff introduced important data structures and heuristics. - [code](http://www.princeton.edu/~chaff/zchaff.html) | [paper](https://www.princeton.edu/~chaff/publication/DAC2001v56.pdf)
+- MiniSAT(2003) - Famous for being good, short (2k LOC), and introducing incremental SAT, MiniSAT is still widely used. [code](https://github.com/niklasso/minisat) |  [paper](http://minisat.se/downloads/MiniSat.pdf) (Clear and worth reading!) 
+- CryptoMiniSAT (2009) - Uses XOR primitive  - [code](https://github.com/msoos/cryptominisat) | [paper](https://www.msoos.org/wordpress/wp-content/uploads/2011/03/Extending_SAT_2009.pdf)
+- Glucose (2009) -  Introduced different heuristics for SAT and UNSAT - [code](https://github.com/audemard/glucose) | [paper](https://univ-artois.hal.science/hal-03299473/file/preprint.pdf)
+- Lingeling (2010) - -  [website](https://fmv.jku.at/lingeling/)
+- PicoSAT (2010) - - [website](https://fmv.jku.at/picosat/)
+- Slime - - [code](https://github.com/maxtuno/slime-sat-solver/)
+- MergeSAT (2021) - - [code](https://github.com/conp-solutions/mergesat)
+- CaDiCaL (2024) - -  [code](https://github.com/arminbiere/cadical)
+- Kissat (2020) - -  [code](https://github.com/arminbiere/kissat)
 
 
-- Satch  https://github.com/arminbiere/satch (expository solver by Armin Biere)
+- [Satch](https://github.com/arminbiere/satch) (expository solver by Armin Biere)
 - [gopher](https://github.com/crillab/gophersat) go
 - [varisat](https://github.com/jix/varisat)  rust
 
@@ -129,8 +119,8 @@ CSP solvers differ from SAT solvers but the communities overlap, and techniques 
 
 ### High Level Modelling Languages 
 
-- MiniZinc (Optimisation) https://www.minizinc.org/
-- Alloy (Software verification) https://alloytools.org/
+- MiniZinc (Optimisation) [project](https://www.minizinc.org/)
+- Alloy (Software verification) [project](https://alloytools.org/)
 
 ### Verification of proofs
 
@@ -168,12 +158,12 @@ Lazy data structures have proven to be very important in SAT solvers.
 - M. Iser and T. Balyo, ‘Unit Propagation with Stable Watches’, 2021. [link](https://publikationen.bibliothek.kit.edu/1000139917)
 - I. P. Gent, ‘Optimal Implementation of Watched Literals and More General Techniques’, Journal of Artificial Intelligence Research, vol. 48, pp. 231–252, Oct. 2013, doi: 10.1613/jair.4016. [link](https://www.jair.org/index.php/jair/article/view/10839)
 
-https://cs.stackexchange.com/questions/150557/what-are-efficient-approaches-to-implement-unit-propagation-in-dpll-based-sat-so
+[more info](https://cs.stackexchange.com/questions/150557/what-are-efficient-approaches-to-implement-unit-propagation-in-dpll-based-sat-so)
 
 ### Encoding Problems in SAT
 
-- Successful SAT encoding techniques  https://content.iospress.com/download/journal-on-satisfiability-boolean-modeling-and-computation/sat190085?id=journal-on-satisfiability-boolean-modeling-and-computation%2Fsat190085
-- Arithmetic operations https://yurichev.com/mirrors/SAT_factor/Encoding%20Basic%20Arithmetic%20Operations%20for%20SAT-Solvers.pdf
+- Successful SAT encoding techniques  [paper](https://content.iospress.com/download/journal-on-satisfiability-boolean-modeling-and-computation/sat190085?id=journal-on-satisfiability-boolean-modeling-and-computation%2Fsat190085)
+- Arithmetic operations [paper](https://yurichev.com/mirrors/SAT_factor/Encoding%20Basic%20Arithmetic%20Operations%20for%20SAT-Solvers.pdf)
 
 ### Heuristics 
 
