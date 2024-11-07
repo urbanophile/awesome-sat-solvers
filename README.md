@@ -9,6 +9,7 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - [Books](#books)
 - [Solvers](#solvers)
 - [Other Software](#software)
+- [Handbook of SAT](#handbook)
 - [Research](#research)
 - [Courses and Lectures](#courses)
 - [Competitions](#competitions)
@@ -33,22 +34,7 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - [Decision Procedures: An Algorithmic Point of View](http://www.decision-procedures.org/) - Great, practical book focusing on the algorithms of SAT and SMT. Strongly recommended.
 - [SAT/SMT by Example](https://smt.st/SAT_SMT_by_example.pdf) (free! available online!)  
 - [The Art of Computer Programming - Satisfiability](https://www.inf.ufrgs.br/~mrpritt/lib/exe/fetch.php?media=inf5504:7.2.2.2-satisfiability.pdf) (available online) Donald Knuth's famous book's section on SAT. 
-- Handbook of Satisfiability (comprehensive and very useful)
-  -  [CH 1 A History of Satisfiability](https://satassociation.org/articles/FAIA185-0003.pdf)
-  -  [CH 2 CNF Encodings](https://www.researchgate.net/profile/Steven-Prestwich/publication/242029085_CNF_encodings/links/5bcf17e992851c1816ba9092/CNF-encodings.pdf)
-  -  [CH 3 Complete Algorithms](https://ics.uci.edu/~dechter/courses/SATChapter3.pdf)
-  -  [CH 4 Conflict-Driven Clause Learning SAT Solvers](https://www.satassociation.org/articles/FAIA185-0131.pdf)
-  -  [CH 5 Look-Ahead Based SAT Solvers (1st Ed.) ](https://www.cs.cmu.edu/~mheule/publications/p01c05_lah.pdf)
-  -  [CH 6 Incomplete Algorithms](https://www.cs.cornell.edu/~sabhar/chapters/IncompleteAlg-SAT-Handbook-prelim.pdf)
-  -  [CH 7 Proof Complexity and SAT Solving](https://jakobnordstrom.se/docs/publications/ProofComplexityChapter.pdf)
-  -  [CH 8 Fundaments of Branching Heuristics](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=027282e993a97cad07797a980c32b0bc83f61989)
-  -  [CH 9 Preprocessing in SAT Solving  (2nd Ed.)](https://cca.informatik.uni-freiburg.de/papers/BiereJarvisaloKiesl-SAT-Handbook-2021-Preprocessing-Chapter-Manuscript.pdf)
-  -  [CH 10 Random Satisfiability (2nd Ed.)](https://cgi.di.uoa.gr/~optas/papers/handbook.pdf)
-  -  [CH 14 Bound Model Checking (1st Ed.)](https://www.satassociation.org/articles/FAIA185-0457.pdf)
-  -  [CH 15 Proofs of Unsatisfiability (2nd Ed.)](https://www.cs.cmu.edu/~mheule/publications/p01c15-prf.pdf) 
-  -  [CH 23 MaxSAT, Hard and Soft Constraints (2nd Ed.)](https://www.iiia.csic.es/media/filer_public/eb/1c/eb1c1fff-ecb8-4279-aa51-810cb5f3dbc8/p02c23-max.pdf)
-  -  [CH 19 Planning and SAT](https://users.aalto.fi/~rintanj1/papers/p02c19-pla.pdf)
-  -  [CH -2 SMT (1st Ed.)](https://homepage.cs.uiowa.edu/~tinelli/papers/BarSST-09.pdf)
+
 
 ## Solvers
 SAT has a nice tradition of making solver public and open source. As Yogi Berra said "You can observe a lot by watchin". Three very important whose source code is informative to read are GRASP, Chaff and MiniSAT. 
@@ -125,11 +111,11 @@ SMT solvers are generally built on top of SAT solvers and solver more complex pr
 ### CSP Solvers
 CSP solvers differ from SAT solvers but the communities overlap, and techniques from CSP have proven very important in SAT e.g. Boolean Constraint Propagation.
 
-- GeCode - C++ based - good documentation and overview of the code - https://www.gecode.org/
-- Sugar - Solving by reduction to SAT -  https://cspsat.gitlab.io/sugar/
-- Picat - logic programming-based - http://picat-lang.org/
-- Choco - Java-based - https://choco-solver.org/
-- OptaPlanner - Java-based - https://www.optaplanner.org/
+- [GeCode](https://www.gecode.org/) - C++ based - good documentation and overview of the code
+- [Sugar](https://cspsat.gitlab.io/sugar/) - Solving by reduction to SAT -  
+- [Picat](http://picat-lang.org/) - logic programming-based
+- [Choco](https://choco-solver.org/) - Java-based
+- [OptaPlanner](https://www.optaplanner.org/) - Java-based
 
 
 
@@ -139,29 +125,48 @@ CSP solvers differ from SAT solvers but the communities overlap, and techniques 
 
 - PySAT (Python) https://pysathq.github.io/
 - Sat4j (Java) http://www.sat4j.org/
+- ORTools (Optimisation) https://developers.google.com/optimization/cp/cp_solver
 
 ### High Level Modelling Languages 
 
 - MiniZinc (Optimisation) https://www.minizinc.org/
 - Alloy (Software verification) https://alloytools.org/
-- ORTools (Optimisation) https://developers.google.com/optimization/cp/cp_solver
 
 ### Verification of proofs
 
 - [DRAT-Trim](https://github.com/marijnheule/drat-trim) - verifier of proofs of unsatisfiability (UNSAT)
 
+## Handbook
+The handbook of SAT is an excellent and comprehensive resources. 
+
+- Handbook of Satisfiability (comprehensive and very useful)
+  -  [CH 1 A History of Satisfiability](https://satassociation.org/articles/FAIA185-0003.pdf)
+  -  [CH 2 CNF Encodings](https://www.researchgate.net/profile/Steven-Prestwich/publication/242029085_CNF_encodings/links/5bcf17e992851c1816ba9092/CNF-encodings.pdf)
+  -  [CH 3 Complete Algorithms](https://ics.uci.edu/~dechter/courses/SATChapter3.pdf)
+  -  [CH 4 Conflict-Driven Clause Learning SAT Solvers](https://www.satassociation.org/articles/FAIA185-0131.pdf)
+  -  [CH 5 Look-Ahead Based SAT Solvers (1st Ed.) ](https://www.cs.cmu.edu/~mheule/publications/p01c05_lah.pdf)
+  -  [CH 6 Incomplete Algorithms](https://www.cs.cornell.edu/~sabhar/chapters/IncompleteAlg-SAT-Handbook-prelim.pdf)
+  -  [CH 7 Proof Complexity and SAT Solving](https://jakobnordstrom.se/docs/publications/ProofComplexityChapter.pdf)
+  -  [CH 8 Fundaments of Branching Heuristics](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=027282e993a97cad07797a980c32b0bc83f61989)
+  -  [CH 9 Preprocessing in SAT Solving  (2nd Ed.)](https://cca.informatik.uni-freiburg.de/papers/BiereJarvisaloKiesl-SAT-Handbook-2021-Preprocessing-Chapter-Manuscript.pdf)
+  -  [CH 10 Random Satisfiability (2nd Ed.)](https://cgi.di.uoa.gr/~optas/papers/handbook.pdf)
+  -  [CH 14 Bound Model Checking (1st Ed.)](https://www.satassociation.org/articles/FAIA185-0457.pdf)
+  -  [CH 15 Proofs of Unsatisfiability (2nd Ed.)](https://www.cs.cmu.edu/~mheule/publications/p01c15-prf.pdf) 
+  -  [CH 23 MaxSAT, Hard and Soft Constraints (2nd Ed.)](https://www.iiia.csic.es/media/filer_public/eb/1c/eb1c1fff-ecb8-4279-aa51-810cb5f3dbc8/p02c23-max.pdf)
+  -  [CH 19 Planning and SAT](https://users.aalto.fi/~rintanj1/papers/p02c19-pla.pdf)
+  -  [CH -2 SMT (1st Ed.)](https://homepage.cs.uiowa.edu/~tinelli/papers/BarSST-09.pdf)
 
 ## Research
 Overviews
 
-- The Silent (R)evolution of SAT - https://cacm.acm.org/research/the-silent-revolution-of-sat/
+- [The Silent (R)evolution of SAT](https://cacm.acm.org/research/the-silent-revolution-of-sat/)
 
 ### Data structures
 
 Lazy data structures have proven to be very important in SAT solvers. 
 
-- M. Iser and T. Balyo, ‘Unit Propagation with Stable Watches’, 2021. https://publikationen.bibliothek.kit.edu/1000139917
-- I. P. Gent, ‘Optimal Implementation of Watched Literals and More General Techniques’, Journal of Artificial Intelligence Research, vol. 48, pp. 231–252, Oct. 2013, doi: 10.1613/jair.4016. https://www.jair.org/index.php/jair/article/view/10839
+- M. Iser and T. Balyo, ‘Unit Propagation with Stable Watches’, 2021. [link](https://publikationen.bibliothek.kit.edu/1000139917)
+- I. P. Gent, ‘Optimal Implementation of Watched Literals and More General Techniques’, Journal of Artificial Intelligence Research, vol. 48, pp. 231–252, Oct. 2013, doi: 10.1613/jair.4016. [link](https://www.jair.org/index.php/jair/article/view/10839)
 
 https://cs.stackexchange.com/questions/150557/what-are-efficient-approaches-to-implement-unit-propagation-in-dpll-based-sat-so
 
@@ -172,25 +177,35 @@ https://cs.stackexchange.com/questions/150557/what-are-efficient-approaches-to-i
 
 ### Heuristics 
 
-### Computational Complexity
+Heuristics around choosing variables which variables and which assignments to make are an extremely improtant part of SAT Solvers
+Important heuristics include:
 
-### Logic and Proof Complexity
+- Vriaable State Independent Decaying Sum (VSAID) introduced in Chaff
+- Clause-move-to-front introduced by HAIFASAT
 
-Relating Proof Complexity Measures and Practical Hardness of SAT https://jakobnordstrom.se/docs/publications/JMNZ12RelatingProofCplx.pdf
+
+
+
+### Theoretical Complexity
+SAT raises some interesting questions because even though it is the canonical NP-complete problem, practical problems can often be solved in close to linear time. 
+[Relating Proof Complexity Measures and Practical Hardness of SAT](https://jakobnordstrom.se/docs/publications/JMNZ12RelatingProofCplx.pdf)
 
 ### Parallelisation
+SAT is tricky to parallelise, but the cube-and-conquer method has been very popular. 
 
-- cube-and-conquer https://www.cs.utexas.edu/~marijn/publications/cube.pdf
+- [cube-and-conquer](https://www.cs.utexas.edu/~marijn/publications/cube.pdf)
 
 
 ### Machine Learning 
 
--
+Machine learning is a related branch of AI and theorem proving. The overlap is mostly in the direction of applying machine learning methods to help SAT solvers e.g.
+
+- SATzilla: Portfolio-based Algorithm Selection for SAT. Journal of Artificial Intelligence Research 32 (2008) 565-606. [link](https://arxiv.org/abs/1111.2249)
 
 
 ### Problems
 
-- ‘SATLIB - Benchmark Problems’. https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html
+- [‘SATLIB - Benchmark Problems’](https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html)
 
 
 
@@ -208,7 +223,7 @@ Relating Proof Complexity Measures and Practical Hardness of SAT https://jakobno
 - [Integer Programming (IP/ILP/MILP)](https://en.wikipedia.org/wiki/Integer_programming)
 
 #### CSP
-- CSP modelling -  https://www.gecode.org/doc-latest/MPG.pdf
+- [CSP modelling](https://www.gecode.org/doc-latest/MPG.pdf)
 - [ (Constraint Propagation - Models, Techniques, Implementation)](https://www.gecode.org/papers/Tack_PhD_2009.pdf)  - intro to CSP theory
 
 #### ILP
@@ -217,8 +232,8 @@ Relating Proof Complexity Measures and Practical Hardness of SAT https://jakobno
 ## Courses 
 
 
-- Constraint Satisfaction https://www.coursera.org/learn/basic-modeling @Monash via Coursera
-- Bug Catching: Automated Program Verification  https://www.cs.cmu.edu/~15414/f17/syllabus.html
+- [Constraint Satisfaction](https://www.coursera.org/learn/basic-modeling) @Monash via Coursera
+- [Bug Catching: Automated Program Verification](https://www.cs.cmu.edu/~15414/f17/syllabus.html)
 
 ## Competitions
 
