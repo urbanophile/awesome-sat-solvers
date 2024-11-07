@@ -40,6 +40,7 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 SAT has a nice tradition of making solver public and open source. As Yogi Berra said "You can observe a lot by watchin". Three very important whose source code is informative to read are GRASP, Chaff and MiniSAT. 
 
 ### SAT Solvers
+
 - WalkSAT (1994) - local search - [code](https://gitlab.com/HenryKautz/Walksat) | [project page](https://henrykautz.com/walksat/index.html)
 - GRASP (1996) -  GRASP pioneered the modern approach of CDCL. - [code](https://github.com/satmuseum/grasp) | [paper](https://www.cs.cmu.edu/~emc/15-820A/reading/grasp_iccad96.pdf)
 - Chaff (2001) - Chaff introduced important data structures and heuristics. - [code](http://www.princeton.edu/~chaff/zchaff.html) | [paper](https://www.princeton.edu/~chaff/publication/DAC2001v56.pdf)
