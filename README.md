@@ -26,7 +26,7 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - [SAT tutorials from SAT association](https://www.satassociation.org/tutorials.html)
 - [LogicNG tutorial](https://logicng.org/tutorial/)
 - [Simons Workshop SAT bootcamp](https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond-boot-camp/schedule#simons-tabs)
-- [Theoretical Foundations of Applied SAT Solving](https://www.birs.ca/events/2014/5-day-workshops/14w5101)  Workshop from 2014 with many useful videos.
+- [Theoretical Foundations of Applied SAT Solving](https://www.birs.ca/events/2014/5-day-workshops/14w5101) - Workshop from 2014 with many useful videos.
 
 ## Books 
 
@@ -41,38 +41,43 @@ SAT has a nice tradition of making solver public and open source. As Yogi Berra 
 
 ### SAT Solvers
 
+These are important or (historical) state of the art solvers.
+
 - WalkSAT (1994) - local search - [code](https://gitlab.com/HenryKautz/Walksat) | [project page](https://henrykautz.com/walksat/index.html)
 - GRASP (1996) -  GRASP pioneered the modern approach of CDCL. - [code](https://github.com/satmuseum/grasp) | [paper](https://www.cs.cmu.edu/~emc/15-820A/reading/grasp_iccad96.pdf)
 - Chaff (2001) - Chaff introduced important data structures and heuristics. - [code](http://www.princeton.edu/~chaff/zchaff.html) | [paper](https://www.princeton.edu/~chaff/publication/DAC2001v56.pdf)
 - MiniSAT(2003) - Famous for being good, short (2k LOC), and introducing incremental SAT, MiniSAT is still widely used. [code](https://github.com/niklasso/minisat) |  [paper](http://minisat.se/downloads/MiniSat.pdf) (Clear and worth reading!) 
 - CryptoMiniSAT (2009) - Uses XOR primitive  - [code](https://github.com/msoos/cryptominisat) | [paper](https://www.msoos.org/wordpress/wp-content/uploads/2011/03/Extending_SAT_2009.pdf)
 - Glucose (2009) -  Introduced different heuristics for SAT and UNSAT - [code](https://github.com/audemard/glucose) | [paper](https://univ-artois.hal.science/hal-03299473/file/preprint.pdf)
-- Lingeling (2010) - -  [website](https://fmv.jku.at/lingeling/)
-- PicoSAT (2010) - - [website](https://fmv.jku.at/picosat/)
+- Lingeling (2010) - [website](https://fmv.jku.at/lingeling/)
+- PicoSAT (2010) - [website](https://fmv.jku.at/picosat/)
 - Slime - - [code](https://github.com/maxtuno/slime-sat-solver/)
-- MergeSAT (2021) - - [code](https://github.com/conp-solutions/mergesat)
-- CaDiCaL (2024) - -  [code](https://github.com/arminbiere/cadical)
+- MergeSAT (2021) - [code](https://github.com/conp-solutions/mergesat)
+- CaDiCaL (2024) - [code](https://github.com/arminbiere/cadical)
 - Kissat (2020) - -  [code](https://github.com/arminbiere/kissat)
 
+Other solvers of interest:
 
-- [Satch](https://github.com/arminbiere/satch) (expository solver by Armin Biere)
-- [gopher](https://github.com/crillab/gophersat) go
-- [varisat](https://github.com/jix/varisat)  rust
+- [Satch](https://github.com/arminbiere/satch) - expository solver by Armin Biere
+- [gopher](https://github.com/crillab/gophersat) - solver written in Go
+- [varisat](https://github.com/jix/varisat) - solver written in Rust
 
 ### Analyses of SAT Solver Performance
 
-- The SAT Museum - https://ceur-ws.org/Vol-3545/paper6.pdf
-- Assessing Progress in SAT Solvers Through the Lens of Incremental SAT https://alexeyignatiev.github.io/assets/pdf/kims-sat21-preprint.pdf
-- SAT: Disruption, Demise & Resurgence http://www.pragmaticsofssat.org/2019/disruption.pdf
-- A case for simple SAT solvers https://users.cecs.anu.edu.au/~jinbo/07-cp.pdf
-- Anatomy and empirical evaluation of modern SAT solvers
+- The SAT Museum - [paper](https://ceur-ws.org/Vol-3545/paper6.pdf)
+- Assessing Progress in SAT Solvers Through the Lens of Incremental SAT - [paper](https://alexeyignatiev.github.io/assets/pdf/kims-sat21-preprint.pdf)
+- SAT: Disruption, Demise & Resurgence - [paper](http://www.pragmaticsofssat.org/2019/disruption.pdf)
+- A case for simple SAT solvers - [paper](https://users.cecs.anu.edu.au/~jinbo/07-cp.pdf)
+- Anatomy and empirical evaluation of modern SAT solvers [paper]()
 
 ### Core concepts
 
-- DPLL 
-- CDCL
-- Clause Learning 
-- Unit propagation "An Efficient Algorithm for Unit Propagation"
+- DPLL -  Davis–Putnam–Logemann–Loveland (DPLL) algorithm is the historic basis for modern solvers - [wiki](https://en.wikipedia.org/wiki/DPLL_algorithm)
+- CDCL - Conflict-driven Clause learning the contemporary extension of DPLL - [wiki](https://en.wikipedia.org/wiki/Conflict-driven_clause_learning)
+- Implication graph - a key construction used to find conflict clauses -  [wiki](https://en.wikipedia.org/wiki/Implication_graph)
+- Unit propagation - a.k.a. Boolean constraint propagation, a rule for  [wiki](https://en.wikipedia.org/wiki/Unit_propagation) - see also ["An Efficient Algorithm for Unit Propagation"](https://www.researchgate.net/publication/2508830_An_Efficient_Algorithm_for_Unit_Propagation)
+- backjumping - [wiki](https://en.wikipedia.org/wiki/Backjumping)
+- [decision heuristics] - [wiki](https://en.wikipedia.org/wiki/Boolean_satisfiability_algorithm_heuristics)
 
 
 
