@@ -1,4 +1,4 @@
-# Awesome SAT and SAT solvers [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) 
+# Awesome SAT solvers [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) 
 
 
 This is a curated collection of resources for the Boolean Satisfiability Problem (SAT), one of the most famous problems in computer science. It also cover related problems and software like Satisfiability Modulo Theory (SMT) solvers and Constraint Satisfaction Problem (CSP) solvers 
@@ -7,8 +7,9 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 
 - [Tutorials](#tutorials)
 - [Books](#books)
-- [Solvers](#solvers)
-- [Other Software](#software)
+- [SAT Solvers](#sat-solvers)
+- [Other Solvers](#other-solvers)
+- [Libraries](#software)
 - [Handbook of SAT](#handbook)
 - [Research](#research)
 - [Courses and Lectures](#courses)
@@ -19,34 +20,30 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 ## Tutorials 
 
 - [Conflict Driven Clause Learning](https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/) - Basic interactive tutorial on a SAT, DPLL, and CDCL
-- [MiniZinc tutorial](https://docs.minizinc.dev/en/stable/part_2_tutorial.html) - takes you through solving combinatorial optimisation problems with MiniZinc
 - [Tutorial introduction to Z3 in Python](https://theory.stanford.edu/~nikolaj/programmingz3.html)  - Short intro to using the z3 python bindings
 - [Modern SAT solvers: fast, neat and underused (part 1 of N)](https://codingnest.com/modern-sat-solvers-fast-neat-underused-part-1-of-n/) - Popular blog series introducing SAT
-- [SAT/SMT school from SAT association](https://www.satassociation.org/sat-smt-school.html) 
-- [SAT tutorials from SAT association](https://www.satassociation.org/tutorials.html)
-- [LogicNG tutorial](https://logicng.org/tutorial/)
-- [Simons Workshop SAT bootcamp](https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond-boot-camp/schedule#simons-tabs)
+- [SAT/SMT school from SAT association](https://www.satassociation.org/sat-smt-school.html)  - Links to many of the old summer schools from the SAT association with introductory material
+- [SAT tutorials from SAT association](https://www.satassociation.org/tutorials.html) - Links to academic books and tutorials on SAT 
+- [LogicNG tutorial](https://logicng.org/tutorial/) - Uses the Java LogicNG library to solve SAT problems, includes a general introduction to SAT.
+- [Simons Workshop SAT bootcamp](https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond-boot-camp/schedule#simons-tabs) - Workshop from 2021 which has introductory lectures to modern SAT solving
 - [Theoretical Foundations of Applied SAT Solving](https://www.birs.ca/events/2014/5-day-workshops/14w5101) - Workshop from 2014 with many useful videos.
+- [MiniZinc tutorial](https://docs.minizinc.dev/en/stable/part_2_tutorial.html) - An intro to constraint satisfaction taking you through solving combinatorial optimisation problems 
 
 ## Books 
 
 - [The Calculus of Computations](https://theory.stanford.edu/~arbrad/book.html) - covers the logic theory background
 - [Decision Procedures: An Algorithmic Point of View](http://www.decision-procedures.org/) - Great, practical book focusing on the algorithms of SAT and SMT. Strongly recommended.
-- [SAT/SMT by Example](https://smt.st/SAT_SMT_by_example.pdf) (free! available online!)  
-- [The Art of Computer Programming - Satisfiability](https://www.inf.ufrgs.br/~mrpritt/lib/exe/fetch.php?media=inf5504:7.2.2.2-satisfiability.pdf) (available online) Donald Knuth's famous book's section on SAT. 
+- [SAT/SMT by Example](https://smt.st/SAT_SMT_by_example.pdf) - free pdf available online! - An excellent problem-based introduction to SAT and SMT. 
+- [The Art of Computer Programming - Satisfiability](https://www.inf.ufrgs.br/~mrpritt/lib/exe/fetch.php?media=inf5504:7.2.2.2-satisfiability.pdf) - Preprint available online - Donald Knuth's famous book's section on SAT. 
 
 
-## Solvers
-SAT has a nice tradition of making solver public and open source. As Yogi Berra said "You can observe a lot by watchin". Three very important whose source code is informative to read are GRASP, Chaff and MiniSAT. 
-
-### SAT Solvers
-
-These are important or (historical) state of the art solvers.
+## SAT Solvers
+SAT has a nice tradition of making solver public and open source. As Yogi Berra said "You can observe a lot by watchin". Three very important whose source code is informative to read are GRASP, Chaff and MiniSAT. These are important or (historical) state of the art solvers.
 
 - WalkSAT (1994) - local search - [code](https://gitlab.com/HenryKautz/Walksat) | [project page](https://henrykautz.com/walksat/index.html)
 - GRASP (1996) -  GRASP pioneered the modern approach of CDCL. - [code](https://github.com/satmuseum/grasp) | [paper](https://www.cs.cmu.edu/~emc/15-820A/reading/grasp_iccad96.pdf)
 - Chaff (2001) - Chaff introduced important data structures and heuristics. - [code](http://www.princeton.edu/~chaff/zchaff.html) | [paper](https://www.princeton.edu/~chaff/publication/DAC2001v56.pdf)
-- MiniSAT(2003) - Famous for being good, short (2k LOC), and introducing incremental SAT, MiniSAT is still widely used. [code](https://github.com/niklasso/minisat) |  [paper](http://minisat.se/downloads/MiniSat.pdf) (Clear and worth reading!) 
+- MiniSAT(2003) - Famous for being good, short (2k LOC), and introducing incremental SAT, MiniSAT is still widely used. Clear and worth reading! [code](https://github.com/niklasso/minisat) |  [paper](http://minisat.se/downloads/MiniSat.pdf) 
 - CryptoMiniSAT (2009) - Uses XOR primitive  - [code](https://github.com/msoos/cryptominisat) | [paper](https://www.msoos.org/wordpress/wp-content/uploads/2011/03/Extending_SAT_2009.pdf)
 - Glucose (2009) -  Introduced different heuristics for SAT and UNSAT - [code](https://github.com/audemard/glucose) | [paper](https://univ-artois.hal.science/hal-03299473/file/preprint.pdf)
 - Lingeling (2010) - [website](https://fmv.jku.at/lingeling/)
@@ -75,24 +72,31 @@ Other solvers of interest:
 - DPLL -  Davis–Putnam–Logemann–Loveland (DPLL) algorithm is the historic basis for modern solvers - [wiki](https://en.wikipedia.org/wiki/DPLL_algorithm)
 - CDCL - Conflict-driven Clause learning the contemporary extension of DPLL - [wiki](https://en.wikipedia.org/wiki/Conflict-driven_clause_learning)
 - Implication graph - a key construction used to find conflict clauses -  [wiki](https://en.wikipedia.org/wiki/Implication_graph)
-- Unit propagation - a.k.a. Boolean constraint propagation, a rule for  [wiki](https://en.wikipedia.org/wiki/Unit_propagation) - see also ["An Efficient Algorithm for Unit Propagation"](https://www.researchgate.net/publication/2508830_An_Efficient_Algorithm_for_Unit_Propagation)
-- backjumping - [wiki](https://en.wikipedia.org/wiki/Backjumping)
-- [decision heuristics] - [wiki](https://en.wikipedia.org/wiki/Boolean_satisfiability_algorithm_heuristics)
+- Unit propagation - a.k.a. Boolean constraint propagation, a rule for simplifying formulas [wiki](https://en.wikipedia.org/wiki/Unit_propagation) - see also ["An Efficient Algorithm for Unit Propagation"](https://www.researchgate.net/publication/2508830_An_Efficient_Algorithm_for_Unit_Propagation)
+- backjumping - Efficient backtracking is one of the main differences between DPLL and CDCL - [wiki](https://en.wikipedia.org/wiki/Backjumping)
+- SAT heuristics - Heuristics are essential to modern SAT solvers. [wiki](https://en.wikipedia.org/wiki/Boolean_satisfiability_algorithm_heuristics)
 
 
+## Other Solvers 
 
-### MaxSAT Solvers and MUS Extracters 
+
+### MaxSAT Solvers
 
 MaxSAT is the problem of the finding the maximum number of clauses which can be satisfied for a particular formula
+- [MaxSAT](https://en.wikipedia.org/wiki/Maximum_satisfiability_problem)
+
 Minimally Unsatisfiable Subformulas are like duals MaxSAT, they ask for the minimal set of assignments which will show a formula is unsatisfiable.
 
 
 - [Loandra](https://github.com/jezberg/loandra) (MaxSAT)
 - [MUSer](https://github.com/meelgroup/muser) (MUSer)
 
-### SharpSAT (#SAT) Solvers
+### SharpSAT Solvers
 
 The #SAT is the problem of counting all the assignments which satisfy a Boolean formula.
+- [#SAT](https://en.wikipedia.org/wiki/Sharp-SAT)
+
+Solvers include:
 
 - [ApproxMCv6](https://github.com/meelgroup/approxmc) (by creators of CryptoMiniSAT)
 - [SharpSAT](https://github.com/marcthurley/sharpSAT) (sota circa 2011)
@@ -106,6 +110,12 @@ SMT solvers are generally built on top of SAT solvers and solver more complex pr
 
 ### CSP Solvers
 CSP solvers differ from SAT solvers but the communities overlap, and techniques from CSP have proven very important in SAT e.g. Boolean Constraint Propagation.
+- [Constraint Satisfaction Problems (CSP)](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem)
+- [CSP modelling](https://www.gecode.org/doc-latest/MPG.pdf)
+- [ (Constraint Propagation - Models, Techniques, Implementation)](https://www.gecode.org/papers/Tack_PhD_2009.pdf)  - intro to CSP theory
+
+
+CSP solvers include:
 
 - [GeCode](https://www.gecode.org/) - C++ based - good documentation and overview of the code
 - [Sugar](https://cspsat.gitlab.io/sugar/) - Solving by reduction to SAT -  
@@ -113,15 +123,32 @@ CSP solvers differ from SAT solvers but the communities overlap, and techniques 
 - [Choco](https://choco-solver.org/) - Java-based
 - [OptaPlanner](https://www.optaplanner.org/) - Java-based
 
+### QBF solvers
+- [Quantified Boolean Formula (QBF)](https://en.wikipedia.org/wiki/True_quantified_Boolean_formula)
 
+solver
+- CAQE - Solver is based on CEGAR not CDCL -  [code](https://github.com/ltentrup/caqe)
+- DepQBF - Based on an extension of CDCL - [code](https://lonsing.github.io/depqbf/)
 
+### Integer Programming Solvers
+
+- [Pseudo-boolean Constraints](https://jakobnordstrom.se/docs/presentations/TalkPseudoBooleanSolvingSimons2103.pdf)
+- [Integer Programming (IP/ILP/MILP)](https://en.wikipedia.org/wiki/Integer_programming)
+- [Branch-and-bound algorithms: A survey of recent advances in searching, branching, and pruning](https://www.sciencedirect.com/science/article/pii/S1572528616000062)
+
+Solvers include:
+
+- CBC [code](https://github.com/coin-or/Cbc)
+- SCIP [project](https://scipopt.org/)
 
 ## Software
+Besides solvers, there are many other pieces of helpful software for solving SAT and related problems. 
+
 ### Libraries
 
-- PySAT (Python) https://pysathq.github.io/
-- Sat4j (Java) http://www.sat4j.org/
-- ORTools (Optimisation) https://developers.google.com/optimization/cp/cp_solver
+- PySAT (Python) - wrapper library  [website](https://pysathq.github.io/)
+- Sat4j (Java) - modelling and wrapper for Java -  [website](http://www.sat4j.org/)
+- ORTools (Python) -  general purpose modelling library for optimisation problems but very good as CSP - [website](https://developers.google.com/optimization/cp/cp_solver)
 
 ### High Level Modelling Languages 
 
@@ -153,7 +180,7 @@ The handbook of SAT is an excellent and comprehensive resources.
   -  [CH -2 SMT (1st Ed.)](https://homepage.cs.uiowa.edu/~tinelli/papers/BarSST-09.pdf)
 
 ## Research
-Overviews
+Overviews and reviews.
 
 - [The Silent (R)evolution of SAT](https://cacm.acm.org/research/the-silent-revolution-of-sat/)
 
@@ -176,11 +203,8 @@ Lazy data structures have proven to be very important in SAT solvers.
 Heuristics around choosing variables which variables and which assignments to make are an extremely improtant part of SAT Solvers
 Important heuristics include:
 
-- Vriaable State Independent Decaying Sum (VSAID) introduced in Chaff
+- Variable State Independent Decaying Sum (VSAID) introduced in Chaff
 - Clause-move-to-front introduced by HAIFASAT
-
-
-
 
 ### Theoretical Complexity
 SAT raises some interesting questions because even though it is the canonical NP-complete problem, practical problems can often be solved in close to linear time. 
@@ -189,14 +213,14 @@ SAT raises some interesting questions because even though it is the canonical NP
 ### Parallelisation
 SAT is tricky to parallelise, but the cube-and-conquer method has been very popular. 
 
-- [cube-and-conquer](https://www.cs.utexas.edu/~marijn/publications/cube.pdf)
+- Cube and Conquer: Guiding CDCL SAT Solvers by Lookaheads [paper](https://www.cs.utexas.edu/~marijn/publications/cube.pdf)
 
 
 ### Machine Learning 
 
 Machine learning is a related branch of AI and theorem proving. The overlap is mostly in the direction of applying machine learning methods to help SAT solvers e.g.
 
-- SATzilla: Portfolio-based Algorithm Selection for SAT. Journal of Artificial Intelligence Research 32 (2008) 565-606. [link](https://arxiv.org/abs/1111.2249)
+- SATzilla: Portfolio-based Algorithm Selection for SAT. Journal of Artificial Intelligence Research 32 (2008) 565-606. [paper](https://arxiv.org/abs/1111.2249)
 
 
 ### Problems
@@ -206,24 +230,7 @@ Machine learning is a related branch of AI and theorem proving. The overlap is m
 
 
 
-##  Related Areas
 
-### Next Door
-- [MaxSAT](https://en.wikipedia.org/wiki/Maximum_satisfiability_problem)
-- [#SAT](https://en.wikipedia.org/wiki/Sharp-SAT)
-- [Pseudo-boolean Constraints](https://jakobnordstrom.se/docs/presentations/TalkPseudoBooleanSolvingSimons2103.pdf) 
-- [Quantified Boolean Formula (QBF)](https://en.wikipedia.org/wiki/True_quantified_Boolean_formula)
-
-### Same Neighbourhood
-- [Constraint Satisfaction Problems (CSP)](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem)
-- [Integer Programming (IP/ILP/MILP)](https://en.wikipedia.org/wiki/Integer_programming)
-
-#### CSP
-- [CSP modelling](https://www.gecode.org/doc-latest/MPG.pdf)
-- [ (Constraint Propagation - Models, Techniques, Implementation)](https://www.gecode.org/papers/Tack_PhD_2009.pdf)  - intro to CSP theory
-
-#### ILP
-- [Branch-and-bound algorithms: A survey of recent advances in searching, branching, and pruning](https://www.sciencedirect.com/science/article/pii/S1572528616000062)
 
 ## Courses 
 
