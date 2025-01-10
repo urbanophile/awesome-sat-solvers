@@ -48,10 +48,10 @@ SAT has a nice tradition of making solver public and open source. As Yogi Berra 
 - Glucose (2009) -  Introduced different heuristics for SAT and UNSAT - [code](https://github.com/audemard/glucose) | [paper](https://univ-artois.hal.science/hal-03299473/file/preprint.pdf)
 - Lingeling (2010) - [website](https://fmv.jku.at/lingeling/)
 - PicoSAT (2010) - [website](https://fmv.jku.at/picosat/)
-- Slime - - [code](https://github.com/maxtuno/slime-sat-solver/)
+- Kissat (2020) - -  [code](https://github.com/arminbiere/kissat)
+- Slime (2021) - [code](https://github.com/maxtuno/slime-sat-solver/)
 - MergeSAT (2021) - [code](https://github.com/conp-solutions/mergesat)
 - CaDiCaL (2024) - [code](https://github.com/arminbiere/cadical)
-- Kissat (2020) - -  [code](https://github.com/arminbiere/kissat)
 
 Other solvers of interest:
 
@@ -79,6 +79,11 @@ Other solvers of interest:
 
 ## Other Solvers 
 
+There many theoretical problems which are closely related to SAT. Solvers for the following adjacent problems are worth knowing about:
+
+- MaxSAT, #SAT and QBF are all progressively harder generalisations of SAT
+- SMT extends the SAT problem with soluble theories.
+- CSP and Integer programming are alternate approaches to solving NP-hard problems  
 
 ### MaxSAT Solvers
 
@@ -100,6 +105,13 @@ Solvers include:
 
 - [ApproxMCv6](https://github.com/meelgroup/approxmc) (by creators of CryptoMiniSAT)
 - [SharpSAT](https://github.com/marcthurley/sharpSAT) (sota circa 2011)
+
+### QBF solvers
+- [Quantified Boolean Formula (QBF)](https://en.wikipedia.org/wiki/True_quantified_Boolean_formula)
+
+solver
+- CAQE - Solver is based on CEGAR not CDCL -  [code](https://github.com/ltentrup/caqe)
+- DepQBF - Based on an extension of CDCL - [code](https://lonsing.github.io/depqbf/)
 
   
 ### SMT Solvers
@@ -123,12 +135,7 @@ CSP solvers include:
 - [Choco](https://choco-solver.org/) - Java-based
 - [OptaPlanner](https://www.optaplanner.org/) - Java-based
 
-### QBF solvers
-- [Quantified Boolean Formula (QBF)](https://en.wikipedia.org/wiki/True_quantified_Boolean_formula)
 
-solver
-- CAQE - Solver is based on CEGAR not CDCL -  [code](https://github.com/ltentrup/caqe)
-- DepQBF - Based on an extension of CDCL - [code](https://lonsing.github.io/depqbf/)
 
 ### Integer Programming Solvers
 
@@ -143,6 +150,8 @@ Solvers include:
 
 ## Software
 Besides solvers, there are many other pieces of helpful software for solving SAT and related problems. 
+
+Many complex problems can be solved by compiling the problem into a SAT encoding. Examples of domain problems which can be solved by reduction include planning problems (SATPLAN), automated theorem proving (via SMT), and formal verification (by bounded model checking). 
 
 ### Libraries
 
@@ -221,16 +230,11 @@ SAT is tricky to parallelise, but the cube-and-conquer method has been very popu
 Machine learning is a related branch of AI and theorem proving. The overlap is mostly in the direction of applying machine learning methods to help SAT solvers e.g.
 
 - SATzilla: Portfolio-based Algorithm Selection for SAT. Journal of Artificial Intelligence Research 32 (2008) 565-606. [paper](https://arxiv.org/abs/1111.2249)
-
+- Machine Learning for Automated Theorem Proving - A survey of recent work [paper](https://ieeexplore.ieee.org/document/9624176)
 
 ### Problems
 
 - [‘SATLIB - Benchmark Problems’](https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html)
-
-
-
-
-
 
 ## Courses 
 
@@ -240,17 +244,17 @@ Machine learning is a related branch of AI and theorem proving. The overlap is m
 
 ## Competitions
 
-- SAT Competition https://satcompetition.github.io/
-- MiniZinc Competition https://www.minizinc.org/challenge/2023/results/
-- LP/CP programming contest https://lpcp-contest.github.io/
-- MaxSAT competition https://maxsat-evaluations.github.io/
-- Model count competition  https://mccompetition.org/
-- QBF competition (more irregular) https://qbf23.pages.sai.jku.at/gallery/
-- Other research competitions https://www.hsu-hh.de/logistik/research/challenges
+- SAT Competition [link](https://satcompetition.github.io/)
+- MiniZinc Competition [link](https://www.minizinc.org/challenge/2023/results/)
+- LP/CP programming contest [link](https://lpcp-contest.github.io/)
+- MaxSAT competition [link](https://maxsat-evaluations.github.io/)
+- Model count competition  [link](https://mccompetition.org/)
+- QBF competition (more irregular) [link](https://qbf23.pages.sai.jku.at/gallery/)
+- Other research competitions [link](https://www.hsu-hh.de/logistik/research/challenges)
 
 ## Other
 
-  - DIMACS file format - https://jix.github.io/varisat/manual/0.2.0/formats/dimacs.html
-  - SAT association - https://www.satassociation.org/
-  - Simons Institute Workshop (2021, 2023) https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond
+  - DIMACS file format - [website](https://jix.github.io/varisat/manual/0.2.0/formats/dimacs.html)
+  - SAT association - [website](https://www.satassociation.org/)
+  - Simons Institute Workshops (2021, 2023) [website](https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond)
 
