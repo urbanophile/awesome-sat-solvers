@@ -8,7 +8,15 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - [Tutorials](#tutorials)
 - [Books](#books)
 - [SAT Solvers](#sat-solvers)
+  - Core Concepts
+  - Performance Analysis
 - [Other Solvers](#other-solvers)
+  - MaxSAT
+  - #SAT
+  - QBF 
+  - SMT
+  - CSP
+  - IP
 - [Libraries](#software)
 - [Handbook of SAT](#handbook)
 - [Research](#research)
@@ -46,18 +54,32 @@ SAT has a nice tradition of making solver public and open source. As Yogi Berra 
 - MiniSAT(2003) - Famous for being good, short (2k LOC), and introducing incremental SAT, MiniSAT is still widely used. Clear and worth reading! [code](https://github.com/niklasso/minisat) |  [paper](http://minisat.se/downloads/MiniSat.pdf) 
 - CryptoMiniSAT (2009) - Uses XOR primitive  - [code](https://github.com/msoos/cryptominisat) | [paper](https://www.msoos.org/wordpress/wp-content/uploads/2011/03/Extending_SAT_2009.pdf)
 - Glucose (2009) -  Introduced different heuristics for SAT and UNSAT - [code](https://github.com/audemard/glucose) | [paper](https://univ-artois.hal.science/hal-03299473/file/preprint.pdf)
-- Lingeling (2010) - [website](https://fmv.jku.at/lingeling/)
 - PicoSAT (2010) - [website](https://fmv.jku.at/picosat/)
+- Lingeling (2010) - version `Lingeling aqw` won several tracks in 2013 [website](https://fmv.jku.at/lingeling/) | [2013 paper](https://fmv.jku.at/papers/Biere-SAT-Competition-2013-Lingeling.pdf)
+- MapleSAT (2016) - 2016 winner used machine learning based branching and restarts policies  [website](https://maplesat.github.io/) | [paper](https://cs.uwaterloo.ca/~ppoupart/publications/sat/learning-rate-branching-heuristic-SAT.pdf)
+- CaDiCaL (2019) - [code](https://github.com/arminbiere/cadical)
 - Kissat (2020) - -  [code](https://github.com/arminbiere/kissat)
 - Slime (2021) - [code](https://github.com/maxtuno/slime-sat-solver/)
 - MergeSAT (2021) - [code](https://github.com/conp-solutions/mergesat)
-- CaDiCaL (2024) - [code](https://github.com/arminbiere/cadical)
+- SBVA-CaDiCaL (2023) - overall winner in SAT competition. Develops heuristic for structured bounded variable addition (SBVA), a preprocessing technique which automatically reencodes formulas by introducing new variables to eliminating clauses which frequently results in reducing formula size. [code](https://github.com/hgarrereyn/SBVA) [paper](https://arxiv.org/pdf/2307.01904)
+
 
 Other solvers of interest:
 
 - [Satch](https://github.com/arminbiere/satch) - expository solver by Armin Biere
 - [gopher](https://github.com/crillab/gophersat) - solver written in Go
 - [varisat](https://github.com/jix/varisat) - solver written in Rust
+- 
+### Core concepts
+
+- DPLL -  Davis–Putnam–Logemann–Loveland (DPLL) algorithm is the historic basis for modern solvers - [wiki](https://en.wikipedia.org/wiki/DPLL_algorithm)
+- CDCL - Conflict-driven Clause learning the contemporary extension of DPLL - [wiki](https://en.wikipedia.org/wiki/Conflict-driven_clause_learning)
+- Implication graph - a key construction used to find conflict clauses -  [wiki](https://en.wikipedia.org/wiki/Implication_graph)
+- Unit propagation - a.k.a. Boolean constraint propagation, a rule for simplifying formulas [wiki](https://en.wikipedia.org/wiki/Unit_propagation)
+    - see also ["An Efficient Algorithm for Unit Propagation"](https://www.researchgate.net/publication/2508830_An_Efficient_Algorithm_for_Unit_Propagation)
+- backjumping - Efficient backtracking is one of the main differences between DPLL and CDCL - [wiki](https://en.wikipedia.org/wiki/Backjumping)
+- SAT heuristics - Heuristics are essential to modern SAT solvers. [wiki](https://en.wikipedia.org/wiki/Boolean_satisfiability_algorithm_heuristics)
+
 
 ### Analyses of SAT Solver Performance
 
@@ -67,14 +89,7 @@ Other solvers of interest:
 - A case for simple SAT solvers - [paper](https://users.cecs.anu.edu.au/~jinbo/07-cp.pdf)
 - Anatomy and empirical evaluation of modern SAT solvers [paper]()
 
-### Core concepts
 
-- DPLL -  Davis–Putnam–Logemann–Loveland (DPLL) algorithm is the historic basis for modern solvers - [wiki](https://en.wikipedia.org/wiki/DPLL_algorithm)
-- CDCL - Conflict-driven Clause learning the contemporary extension of DPLL - [wiki](https://en.wikipedia.org/wiki/Conflict-driven_clause_learning)
-- Implication graph - a key construction used to find conflict clauses -  [wiki](https://en.wikipedia.org/wiki/Implication_graph)
-- Unit propagation - a.k.a. Boolean constraint propagation, a rule for simplifying formulas [wiki](https://en.wikipedia.org/wiki/Unit_propagation) - see also ["An Efficient Algorithm for Unit Propagation"](https://www.researchgate.net/publication/2508830_An_Efficient_Algorithm_for_Unit_Propagation)
-- backjumping - Efficient backtracking is one of the main differences between DPLL and CDCL - [wiki](https://en.wikipedia.org/wiki/Backjumping)
-- SAT heuristics - Heuristics are essential to modern SAT solvers. [wiki](https://en.wikipedia.org/wiki/Boolean_satisfiability_algorithm_heuristics)
 
 
 ## Other Solvers 
