@@ -260,6 +260,9 @@ Machine learning is a related branch of AI and theorem proving. The overlap is m
 
 ## Other Resources
 
+  - DIMACS file format - [website](https://jix.github.io/varisat/manual/0.2.0/formats/dimacs.html)
+  - SAT association - [website](https://www.satassociation.org/)
+  - Simons Institute Workshops (2021, 2023) [website](https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond)
 
 ### Handbook
 The handbook of SAT is an excellent and comprehensive resources. 
@@ -276,13 +279,11 @@ The handbook of SAT is an excellent and comprehensive resources.
   -  [CH 9 Preprocessing in SAT Solving  (2nd Ed.)](https://cca.informatik.uni-freiburg.de/papers/BiereJarvisaloKiesl-SAT-Handbook-2021-Preprocessing-Chapter-Manuscript.pdf)
   -  [CH 10 Random Satisfiability (2nd Ed.)](https://cgi.di.uoa.gr/~optas/papers/handbook.pdf)
   -  [CH 14 Bound Model Checking (1st Ed.)](https://www.satassociation.org/articles/FAIA185-0457.pdf)
-  -  [CH 15 Proofs of Unsatisfiability (2nd Ed.)](https://www.cs.cmu.edu/~mheule/publications/p01c15-prf.pdf) 
-  -  [CH 23 MaxSAT, Hard and Soft Constraints (2nd Ed.)](https://www.iiia.csic.es/media/filer_public/eb/1c/eb1c1fff-ecb8-4279-aa51-810cb5f3dbc8/p02c23-max.pdf)
+  -  [CH 15 Proofs of Unsatisfiability (2nd Ed.)](https://www.cs.cmu.edu/~mheule/publications/p01c15-prf.pdf)
   -  [CH 19 Planning and SAT](https://users.aalto.fi/~rintanj1/papers/p02c19-pla.pdf)
+  -  [CH 23 MaxSAT, Hard and Soft Constraints (2nd Ed.)](https://www.iiia.csic.es/media/filer_public/eb/1c/eb1c1fff-ecb8-4279-aa51-810cb5f3dbc8/p02c23-max.pdf)
   -  [CH -2 SMT (1st Ed.)](https://homepage.cs.uiowa.edu/~tinelli/papers/BarSST-09.pdf)
-  - DIMACS file format - [website](https://jix.github.io/varisat/manual/0.2.0/formats/dimacs.html)
-  - SAT association - [website](https://www.satassociation.org/)
-  - Simons Institute Workshops (2021, 2023) [website](https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond)
+
 
 ### Books 
 
@@ -304,3 +305,5 @@ The handbook of SAT is an excellent and comprehensive resources.
 ### Benchmark Problems
 
 - [‘SATLIB - Benchmark Problems’](https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html)
+- Original 1992 DIMACS workshop problems [ftp site](http://archive.dimacs.rutgers.edu/pub/challenge/sat/benchmarks/)
+- Historic SAT benchmark database [website](https://benchmark-database.de/) | [paper](https://abiteboul.com/gemoReports/GemoReport-355.pdf)
