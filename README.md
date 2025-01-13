@@ -54,12 +54,12 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - [Simons Workshop SAT bootcamp](https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond-boot-camp/schedule#simons-tabs) - Workshop from 2021 which has introductory lectures to modern SAT solving
 - [Theoretical Foundations of Applied SAT Solving](https://www.birs.ca/events/2014/5-day-workshops/14w5101) - Workshop from 2014 with many useful videos.
 - [Constraint Satisfaction](https://www.coursera.org/learn/basic-modeling) @Monash via Coursera
-- [Bug Catching: Automated Program Verification](https://www.cs.cmu.edu/~15414/f17/syllabus.html)
 
 ### academic tutorials
 - [SAT/SMT school from SAT association](https://www.satassociation.org/sat-smt-school.html)  - Links to many of the old summer schools from the SAT association with introductory material
 - [SAT tutorials from SAT association](https://www.satassociation.org/tutorials.html) - Links to academic books and tutorials on SAT 
-
+- [course from ARmin Biere for undergrads](https://cca.informatik.uni-freiburg.de/sat/ss23/)
+- [Bug Catching: Automated Program Verification](https://www.cs.cmu.edu/~15414/f17/syllabus.html)
 
 
 
