@@ -5,48 +5,71 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 
 ## Contents
 
-- [Tutorials](#tutorials)
-- [Books](#books)
+- [Introductions and Tutorials](#introductions-and-tutorials)
 - [SAT Solvers](#sat-solvers)
-  - Core Concepts
-  - Performance Analysis
+  - [important solvers](#important-solvers)
+  - [Core Concepts](#core-concepts)
+  - [Performance Analysis](#performance-analysis)
 - [Other Solvers](#other-solvers)
-  - MaxSAT
-  - #SAT
-  - QBF 
-  - SMT
-  - CSP
-  - IP
-- [Libraries](#software)
-- [Handbook of SAT](#handbook)
+  - [MaxSAT](#maxsat-solvers)
+  - [#SAT](#sharpsat-solvers)
+  - [QBF](#qbf-solvers)
+  - [SMT](#smt-solvers)
+  - [CSP](#csp-solvers)
+  - [IP](#ip-solvers)
+- [Other Software and Libraries](#other-software-and-libraries)
 - [Research](#research)
-- [Courses and Lectures](#courses)
-- [Competitions](#competitions)
-- [Other Resources](#other)
+  - [Data structures](#data-structures)
+  - [Encoding Problems in SAT](#encoding-problems-in-sat)
+  - [Heuristics](#heuristics)
+  - [Theoretical Complexity](#theoretical-complexity)
+  - [Parallelisation](#parallelisation)
+  - [Machine Learning](#machine-learning) 
+- [Other Resources](#other-resources)
+  - [Handbook of SAT](#handbook)
+  - [Books](#books)
+  - [Competitions](#competitions)
+  - [Benchmark Problems](#benchmark-problems)
 
 
-## Tutorials 
 
-- [Conflict Driven Clause Learning](https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/) - Basic interactive tutorial on a SAT, DPLL, and CDCL
+
+## Introductions and Tutorials
+
+### hands-on 
+
+- [Conflict Driven Clause Learning](https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/) - Basic interactive tutorial on a SAT, DPLL, and CDCL 
 - [Tutorial introduction to Z3 in Python](https://theory.stanford.edu/~nikolaj/programmingz3.html)  - Short intro to using the z3 python bindings
-- [Modern SAT solvers: fast, neat and underused (part 1 of N)](https://codingnest.com/modern-sat-solvers-fast-neat-underused-part-1-of-n/) - Popular blog series introducing SAT
-- [SAT/SMT school from SAT association](https://www.satassociation.org/sat-smt-school.html)  - Links to many of the old summer schools from the SAT association with introductory material
-- [SAT tutorials from SAT association](https://www.satassociation.org/tutorials.html) - Links to academic books and tutorials on SAT 
+- [MiniZinc tutorial](https://docs.minizinc.dev/en/stable/part_2_tutorial.html) - An intro to constraint satisfaction taking you through solving combinatorial optimisation problems
 - [LogicNG tutorial](https://logicng.org/tutorial/) - Uses the Java LogicNG library to solve SAT problems, includes a general introduction to SAT.
+
+### surveys
+
+- [Modern SAT solvers: fast, neat and underused (part 1 of N)](https://codingnest.com/modern-sat-solvers-fast-neat-underused-part-1-of-n/) - Popular blog series introducing SAT
+- [The Silent (R)evolution of SAT](https://cacm.acm.org/research/the-silent-revolution-of-sat/)
+
+
+### videos 
+
 - [Simons Workshop SAT bootcamp](https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond-boot-camp/schedule#simons-tabs) - Workshop from 2021 which has introductory lectures to modern SAT solving
 - [Theoretical Foundations of Applied SAT Solving](https://www.birs.ca/events/2014/5-day-workshops/14w5101) - Workshop from 2014 with many useful videos.
-- [MiniZinc tutorial](https://docs.minizinc.dev/en/stable/part_2_tutorial.html) - An intro to constraint satisfaction taking you through solving combinatorial optimisation problems 
+- [Constraint Satisfaction](https://www.coursera.org/learn/basic-modeling) @Monash via Coursera
+- [Bug Catching: Automated Program Verification](https://www.cs.cmu.edu/~15414/f17/syllabus.html)
 
-## Books 
+### academic tutorials
+- [SAT/SMT school from SAT association](https://www.satassociation.org/sat-smt-school.html)  - Links to many of the old summer schools from the SAT association with introductory material
+- [SAT tutorials from SAT association](https://www.satassociation.org/tutorials.html) - Links to academic books and tutorials on SAT 
 
-- [The Calculus of Computations](https://theory.stanford.edu/~arbrad/book.html) - covers the logic theory background
-- [Decision Procedures: An Algorithmic Point of View](http://www.decision-procedures.org/) - Great, practical book focusing on the algorithms of SAT and SMT. Strongly recommended.
-- [SAT/SMT by Example](https://smt.st/SAT_SMT_by_example.pdf) - free pdf available online! - An excellent problem-based introduction to SAT and SMT. 
-- [The Art of Computer Programming - Satisfiability](https://www.inf.ufrgs.br/~mrpritt/lib/exe/fetch.php?media=inf5504:7.2.2.2-satisfiability.pdf) - Preprint available online - Donald Knuth's famous book's section on SAT. 
+
+
+
 
 
 ## SAT Solvers
-SAT has a nice tradition of making solver public and open source. As Yogi Berra said "You can observe a lot by watchin". Three very important whose source code is informative to read are GRASP, Chaff and MiniSAT. These are important or (historical) state of the art solvers.
+SAT has a nice tradition of making solver public and open source. As Yogi Berra said "You can observe a lot by watchin". 
+
+### important solvers
+Three very important whose source code is informative to read are GRASP, Chaff and MiniSAT. These are important or (historical) state of the art solvers.
 
 - WalkSAT (1994) - local search - [code](https://gitlab.com/HenryKautz/Walksat) | [project page](https://henrykautz.com/walksat/index.html)
 - GRASP (1996) -  GRASP pioneered the modern approach of CDCL. - [code](https://github.com/satmuseum/grasp) | [paper](https://www.cs.cmu.edu/~emc/15-820A/reading/grasp_iccad96.pdf)
@@ -57,15 +80,14 @@ SAT has a nice tradition of making solver public and open source. As Yogi Berra 
 - PicoSAT (2010) - [website](https://fmv.jku.at/picosat/)
 - Lingeling (2010) - version `Lingeling aqw` won several tracks in 2013 [website](https://fmv.jku.at/lingeling/) | [2013 paper](https://fmv.jku.at/papers/Biere-SAT-Competition-2013-Lingeling.pdf)
 - MapleSAT (2016) - 2016 winner used machine learning based branching and restarts policies  [website](https://maplesat.github.io/) | [paper](https://cs.uwaterloo.ca/~ppoupart/publications/sat/learning-rate-branching-heuristic-SAT.pdf)
-- CaDiCaL (2019) - [code](https://github.com/arminbiere/cadical)
+- CaDiCaL (2019) - [paper](https://cca.informatik.uni-freiburg.de/papers/Biere-SAT-Competition-2018-solvers.pdf) | [code](https://github.com/arminbiere/cadical)
 - Kissat (2020) - -  [code](https://github.com/arminbiere/kissat)
-- Slime (2021) - [code](https://github.com/maxtuno/slime-sat-solver/)
-- MergeSAT (2021) - [code](https://github.com/conp-solutions/mergesat)
 - SBVA-CaDiCaL (2023) - overall winner in SAT competition. Develops heuristic for structured bounded variable addition (SBVA), a preprocessing technique which automatically reencodes formulas by introducing new variables to eliminating clauses which frequently results in reducing formula size. [code](https://github.com/hgarrereyn/SBVA) [paper](https://arxiv.org/pdf/2307.01904)
 
 
 Other solvers of interest:
-
+- Slime (2021) - [code](https://github.com/maxtuno/slime-sat-solver/)
+- MergeSAT (2021) - [code](https://github.com/conp-solutions/mergesat)
 - [Satch](https://github.com/arminbiere/satch) - expository solver by Armin Biere
 - [gopher](https://github.com/crillab/gophersat) - solver written in Go
 - [varisat](https://github.com/jix/varisat) - solver written in Rust
@@ -81,7 +103,7 @@ Other solvers of interest:
 - SAT heuristics - Heuristics are essential to modern SAT solvers. [wiki](https://en.wikipedia.org/wiki/Boolean_satisfiability_algorithm_heuristics)
 
 
-### Analyses of SAT Solver Performance
+### Performance Analysis
 
 - The SAT Museum - [paper](https://ceur-ws.org/Vol-3545/paper6.pdf)
 - Assessing Progress in SAT Solvers Through the Lens of Incremental SAT - [paper](https://alexeyignatiev.github.io/assets/pdf/kims-sat21-preprint.pdf)
@@ -102,10 +124,11 @@ There many theoretical problems which are closely related to SAT. Solvers for th
 
 ### MaxSAT Solvers
 
-MaxSAT is the problem of the finding the maximum number of clauses which can be satisfied for a particular formula
+MaxSAT is the problem of the finding the maximum number of clauses which can be satisfied for a particular formula. MaxSAT can be seen as an optimisation version of the SAT problem.
+
 - [MaxSAT](https://en.wikipedia.org/wiki/Maximum_satisfiability_problem)
 
-Minimally Unsatisfiable Subformulas are like duals MaxSAT, they ask for the minimal set of assignments which will show a formula is unsatisfiable.
+Minimally Unsatisfiable Subformulas (MUSs) are like duals MaxSAT, they ask for the minimal set of assignments which will show a formula is unsatisfiable.
 
 
 - [Loandra](https://github.com/jezberg/loandra) (MaxSAT)
@@ -122,15 +145,16 @@ Solvers include:
 - [SharpSAT](https://github.com/marcthurley/sharpSAT) (sota circa 2011)
 
 ### QBF solvers
+Quantified boolean formula (QBF) is generalisation boolean formula which allows existential and universal quanitifiers. The SAT problem for QBF formula (QSAT) is the canonical PSPACE problem. In addition to CDCL, a standard QBF solver algorithm is CounterExample-Guided Abstraction Refinement (CEGAR).
 - [Quantified Boolean Formula (QBF)](https://en.wikipedia.org/wiki/True_quantified_Boolean_formula)
 
-solver
+Solvers include:
 - CAQE - Solver is based on CEGAR not CDCL -  [code](https://github.com/ltentrup/caqe)
 - DepQBF - Based on an extension of CDCL - [code](https://lonsing.github.io/depqbf/)
 
   
 ### SMT Solvers
-SMT solvers are generally built on top of SAT solvers and solver more complex problems. 
+Satisfiable Modulo Theory (SMT) solvers are generally built on top of SAT solvers and solver more complex problems. 
 - [Z3](https://github.com/Z3Prover/z3)
 - [cvc5](https://cvc5.github.io/)
 - [Bitwuzla](https://github.com/bitwuzla/bitwuzla) (successor to Boolector) 
@@ -152,7 +176,9 @@ CSP solvers include:
 
 
 
-### Integer Programming Solvers
+### IP Solvers
+
+0-1 integer programming was the first in Karp's list of 21 NP-complete problems which was reducible to SAT. Pseudo-boolean constraints are another term for 0-1 integer linear programming (ILP). While ILP solvers use exhaustive search (e.g. branch and bound) they make heavy use of relaxations of the problem.
 
 - [Pseudo-boolean Constraints](https://jakobnordstrom.se/docs/presentations/TalkPseudoBooleanSolvingSimons2103.pdf)
 - [Integer Programming (IP/ILP/MILP)](https://en.wikipedia.org/wiki/Integer_programming)
@@ -163,7 +189,7 @@ Solvers include:
 - CBC [code](https://github.com/coin-or/Cbc)
 - SCIP [project](https://scipopt.org/)
 
-## Software
+## Other Software and Libraries
 Besides solvers, there are many other pieces of helpful software for solving SAT and related problems. 
 
 Many complex problems can be solved by compiling the problem into a SAT encoding. Examples of domain problems which can be solved by reduction include planning problems (SATPLAN), automated theorem proving (via SMT), and formal verification (by bounded model checking). 
@@ -183,25 +209,7 @@ Many complex problems can be solved by compiling the problem into a SAT encoding
 
 - [DRAT-Trim](https://github.com/marijnheule/drat-trim) - verifier of proofs of unsatisfiability (UNSAT)
 
-## Handbook
-The handbook of SAT is an excellent and comprehensive resources. 
 
-- Handbook of Satisfiability (comprehensive and very useful)
-  -  [CH 1 A History of Satisfiability](https://satassociation.org/articles/FAIA185-0003.pdf)
-  -  [CH 2 CNF Encodings](https://www.researchgate.net/profile/Steven-Prestwich/publication/242029085_CNF_encodings/links/5bcf17e992851c1816ba9092/CNF-encodings.pdf)
-  -  [CH 3 Complete Algorithms](https://ics.uci.edu/~dechter/courses/SATChapter3.pdf)
-  -  [CH 4 Conflict-Driven Clause Learning SAT Solvers](https://www.satassociation.org/articles/FAIA185-0131.pdf)
-  -  [CH 5 Look-Ahead Based SAT Solvers (1st Ed.) ](https://www.cs.cmu.edu/~mheule/publications/p01c05_lah.pdf)
-  -  [CH 6 Incomplete Algorithms](https://www.cs.cornell.edu/~sabhar/chapters/IncompleteAlg-SAT-Handbook-prelim.pdf)
-  -  [CH 7 Proof Complexity and SAT Solving](https://jakobnordstrom.se/docs/publications/ProofComplexityChapter.pdf)
-  -  [CH 8 Fundaments of Branching Heuristics](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=027282e993a97cad07797a980c32b0bc83f61989)
-  -  [CH 9 Preprocessing in SAT Solving  (2nd Ed.)](https://cca.informatik.uni-freiburg.de/papers/BiereJarvisaloKiesl-SAT-Handbook-2021-Preprocessing-Chapter-Manuscript.pdf)
-  -  [CH 10 Random Satisfiability (2nd Ed.)](https://cgi.di.uoa.gr/~optas/papers/handbook.pdf)
-  -  [CH 14 Bound Model Checking (1st Ed.)](https://www.satassociation.org/articles/FAIA185-0457.pdf)
-  -  [CH 15 Proofs of Unsatisfiability (2nd Ed.)](https://www.cs.cmu.edu/~mheule/publications/p01c15-prf.pdf) 
-  -  [CH 23 MaxSAT, Hard and Soft Constraints (2nd Ed.)](https://www.iiia.csic.es/media/filer_public/eb/1c/eb1c1fff-ecb8-4279-aa51-810cb5f3dbc8/p02c23-max.pdf)
-  -  [CH 19 Planning and SAT](https://users.aalto.fi/~rintanj1/papers/p02c19-pla.pdf)
-  -  [CH -2 SMT (1st Ed.)](https://homepage.cs.uiowa.edu/~tinelli/papers/BarSST-09.pdf)
 
 ## Research
 Overviews and reviews.
@@ -221,6 +229,7 @@ Lazy data structures have proven to be very important in SAT solvers.
 
 - Successful SAT encoding techniques  [paper](https://content.iospress.com/download/journal-on-satisfiability-boolean-modeling-and-computation/sat190085?id=journal-on-satisfiability-boolean-modeling-and-computation%2Fsat190085)
 - Arithmetic operations [paper](https://yurichev.com/mirrors/SAT_factor/Encoding%20Basic%20Arithmetic%20Operations%20for%20SAT-Solvers.pdf)
+- practical reduction of linear constraints to SAT is described here: [Encoding Linear Constraints into SAT (paper)](https://arxiv.org/pdf/2005.02073)
 
 ### Heuristics 
 
@@ -232,7 +241,9 @@ Important heuristics include:
 
 ### Theoretical Complexity
 SAT raises some interesting questions because even though it is the canonical NP-complete problem, practical problems can often be solved in close to linear time. 
-[Relating Proof Complexity Measures and Practical Hardness of SAT](https://jakobnordstrom.se/docs/publications/JMNZ12RelatingProofCplx.pdf)
+
+- [Relating Proof Complexity Measures and Practical Hardness of SAT](https://jakobnordstrom.se/docs/publications/JMNZ12RelatingProofCplx.pdf)
+- Karp's 21 NP-complete problems (1971) [paper](https://cgi.di.uoa.gr/~sgk/teaching/grad/handouts/karp.pdf)
 
 ### Parallelisation
 SAT is tricky to parallelise, but the cube-and-conquer method has been very popular. 
@@ -247,17 +258,40 @@ Machine learning is a related branch of AI and theorem proving. The overlap is m
 - SATzilla: Portfolio-based Algorithm Selection for SAT. Journal of Artificial Intelligence Research 32 (2008) 565-606. [paper](https://arxiv.org/abs/1111.2249)
 - Machine Learning for Automated Theorem Proving - A survey of recent work [paper](https://ieeexplore.ieee.org/document/9624176)
 
-### Problems
-
-- [‘SATLIB - Benchmark Problems’](https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html)
-
-## Courses 
+## Other Resources
 
 
-- [Constraint Satisfaction](https://www.coursera.org/learn/basic-modeling) @Monash via Coursera
-- [Bug Catching: Automated Program Verification](https://www.cs.cmu.edu/~15414/f17/syllabus.html)
+### Handbook
+The handbook of SAT is an excellent and comprehensive resources. 
 
-## Competitions
+- Handbook of Satisfiability (comprehensive and very useful)
+  -  [CH 1 A History of Satisfiability](https://satassociation.org/articles/FAIA185-0003.pdf)
+  -  [CH 2 CNF Encodings](https://www.researchgate.net/profile/Steven-Prestwich/publication/242029085_CNF_encodings/links/5bcf17e992851c1816ba9092/CNF-encodings.pdf)
+  -  [CH 3 Complete Algorithms](https://ics.uci.edu/~dechter/courses/SATChapter3.pdf)
+  -  [CH 4 Conflict-Driven Clause Learning SAT Solvers](https://www.satassociation.org/articles/FAIA185-0131.pdf)
+  -  [CH 5 Look-Ahead Based SAT Solvers (1st Ed.) ](https://www.cs.cmu.edu/~mheule/publications/p01c05_lah.pdf)
+  -  [CH 6 Incomplete Algorithms](https://www.cs.cornell.edu/~sabhar/chapters/IncompleteAlg-SAT-Handbook-prelim.pdf)
+  -  [CH 7 Proof Complexity and SAT Solving](https://jakobnordstrom.se/docs/publications/ProofComplexityChapter.pdf)
+  -  [CH 8 Fundaments of Branching Heuristics](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=027282e993a97cad07797a980c32b0bc83f61989)
+  -  [CH 9 Preprocessing in SAT Solving  (2nd Ed.)](https://cca.informatik.uni-freiburg.de/papers/BiereJarvisaloKiesl-SAT-Handbook-2021-Preprocessing-Chapter-Manuscript.pdf)
+  -  [CH 10 Random Satisfiability (2nd Ed.)](https://cgi.di.uoa.gr/~optas/papers/handbook.pdf)
+  -  [CH 14 Bound Model Checking (1st Ed.)](https://www.satassociation.org/articles/FAIA185-0457.pdf)
+  -  [CH 15 Proofs of Unsatisfiability (2nd Ed.)](https://www.cs.cmu.edu/~mheule/publications/p01c15-prf.pdf) 
+  -  [CH 23 MaxSAT, Hard and Soft Constraints (2nd Ed.)](https://www.iiia.csic.es/media/filer_public/eb/1c/eb1c1fff-ecb8-4279-aa51-810cb5f3dbc8/p02c23-max.pdf)
+  -  [CH 19 Planning and SAT](https://users.aalto.fi/~rintanj1/papers/p02c19-pla.pdf)
+  -  [CH -2 SMT (1st Ed.)](https://homepage.cs.uiowa.edu/~tinelli/papers/BarSST-09.pdf)
+  - DIMACS file format - [website](https://jix.github.io/varisat/manual/0.2.0/formats/dimacs.html)
+  - SAT association - [website](https://www.satassociation.org/)
+  - Simons Institute Workshops (2021, 2023) [website](https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond)
+
+### Books 
+
+- [The Calculus of Computations](https://theory.stanford.edu/~arbrad/book.html) - covers the logic theory background
+- [Decision Procedures: An Algorithmic Point of View](http://www.decision-procedures.org/) - Great, practical book focusing on the algorithms of SAT and SMT. Strongly recommended.
+- [SAT/SMT by Example](https://smt.st/SAT_SMT_by_example.pdf) - free pdf available online! - An excellent problem-based introduction to SAT and SMT. 
+- [The Art of Computer Programming - Satisfiability](https://www.inf.ufrgs.br/~mrpritt/lib/exe/fetch.php?media=inf5504:7.2.2.2-satisfiability.pdf) - Preprint available online - Donald Knuth's famous book's section on SAT. 
+
+### Competitions
 
 - SAT Competition [link](https://satcompetition.github.io/)
 - MiniZinc Competition [link](https://www.minizinc.org/challenge/2023/results/)
@@ -267,9 +301,6 @@ Machine learning is a related branch of AI and theorem proving. The overlap is m
 - QBF competition (more irregular) [link](https://qbf23.pages.sai.jku.at/gallery/)
 - Other research competitions [link](https://www.hsu-hh.de/logistik/research/challenges)
 
-## Other
+### Benchmark Problems
 
-  - DIMACS file format - [website](https://jix.github.io/varisat/manual/0.2.0/formats/dimacs.html)
-  - SAT association - [website](https://www.satassociation.org/)
-  - Simons Institute Workshops (2021, 2023) [website](https://simons.berkeley.edu/workshops/satisfiability-theory-practice-beyond)
-
+- [‘SATLIB - Benchmark Problems’](https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html)
