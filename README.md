@@ -7,12 +7,12 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 
 - [Introductions and Tutorials](#introductions-and-tutorials)
 - [SAT Solvers](#sat-solvers)
-  - [important solvers](#important-solvers)
-  - [other solvers of interest](#other-solvers-of-interest)
+  - [Important Solvers](#important-solvers)
+  - [Other solvers of interest](#other-solvers-of-interest)
   - [Core Concepts](#core-concepts)
   - [Performance Analysis](#performance-analysis)
-  - [implementation](#implementation-tips-and-tricks)
-- [Other Solvers](#other-solvers)
+  - [Implementation tips and tricks](#implementation-tips-and-tricks)
+- [Solvers for related problems](#related-solvers)
   - [MaxSAT](#maxsat-solvers)
   - [#SAT](#sharpsat-solvers)
   - [QBF](#qbf-solvers)
@@ -32,7 +32,6 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
   - [Books](#books)
   - [Competitions](#competitions)
   - [Benchmark Problems](#benchmark-problems)
-
 
 
 
@@ -64,6 +63,8 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 - [Course from Armin Biere for undergrads](https://cca.informatik.uni-freiburg.de/sat/ss23/) - 2023
 - [Bug Catching: Automated Program Verification](https://www.cs.cmu.edu/~15414/f17/syllabus.html) - 2017
 
+
+
 ## SAT Solvers
 SAT has a nice tradition of making solver public and open source. As Yogi Berra said "You can observe a lot by watchin". 
 
@@ -83,8 +84,8 @@ Three very important whose source code is informative to read are GRASP, Chaff a
 - Kissat (2020) - -  [code](https://github.com/arminbiere/kissat)
 - SBVA-CaDiCaL (2023) - overall winner in SAT competition. Develops heuristic for structured bounded variable addition (SBVA), a preprocessing technique which automatically reencodes formulas by introducing new variables to eliminating clauses which frequently results in reducing formula size. [code](https://github.com/hgarrereyn/SBVA) [paper](https://arxiv.org/pdf/2307.01904)
 
-
 ### Other solvers of interest:
+
 - Slime (2021) - [code](https://github.com/maxtuno/slime-sat-solver/)
 - MergeSAT (2021) - [code](https://github.com/conp-solutions/mergesat)
 - [Satch](https://github.com/arminbiere/satch) - expository solver by Armin Biere
@@ -119,7 +120,9 @@ Three very important whose source code is informative to read are GRASP, Chaff a
 - Anatomy and empirical evaluation of modern SAT solvers 2011 [paper](http://eatcs.org/beatcs/index.php/beatcs/article/view/138)
 - [notes on Implementation from bug catcher course](https://www.cs.cmu.edu/~15414/f18/2018/lectures/20-sat-techniques.pdf) 
 
-## Other Solvers 
+
+
+## Related Solvers
 
 There many theoretical problems which are closely related to SAT. Solvers for the following adjacent problems are worth knowing about:
 
@@ -179,6 +182,7 @@ Solvers include:
 - SCIP [project](https://scipopt.org/)
 
 
+
 ## Other Software and Libraries
 Besides solvers, there are many other pieces of helpful software for solving SAT and related problems. 
 
@@ -199,20 +203,17 @@ Many complex problems can be solved by compiling the problem into a SAT encoding
 
 - [DRAT-Trim](https://github.com/marijnheule/drat-trim) - verifier of proofs of unsatisfiability (UNSAT)
 
-
 ## Research
-Overviews and reviews.
+There is a vast literature on SAT.
 
 - [The Silent (R)evolution of SAT](https://cacm.acm.org/research/the-silent-revolution-of-sat/)
 
 ### Data structures
 
 Lazy data structures have proven to be very important in SAT solvers. 
-
-- M. Iser and T. Balyo, ‘Unit Propagation with Stable Watches’, 2021. [link](https://publikationen.bibliothek.kit.edu/1000139917)
-- I. P. Gent, ‘Optimal Implementation of Watched Literals and More General Techniques’, Journal of Artificial Intelligence Research, vol. 48, pp. 231–252, Oct. 2013, doi: 10.1613/jair.4016. [link](https://www.jair.org/index.php/jair/article/view/10839)
-
-[more info](https://cs.stackexchange.com/questions/150557/what-are-efficient-approaches-to-implement-unit-propagation-in-dpll-based-sat-so)
+  - M. Iser and T. Balyo, ‘Unit Propagation with Stable Watches’, 2021. [link](https://publikationen.bibliothek.kit.edu/1000139917)
+  - I. P. Gent, ‘Optimal Implementation of Watched Literals and More General Techniques’, Journal of Artificial Intelligence Research, vol. 48, pp. 231–252, Oct. 2013, doi: 10.1613/jair.4016. [link](https://www.jair.org/index.php/jair/article/view/10839)
+  - [more info](https://cs.stackexchange.com/questions/150557/what-are-efficient-approaches-to-implement-unit-propagation-in-dpll-based-sat-so)
 
 ### Encoding Problems in SAT
 
@@ -239,13 +240,14 @@ SAT is tricky to parallelise, but the cube-and-conquer method has been very popu
 
 - Cube and Conquer: Guiding CDCL SAT Solvers by Lookaheads [paper](https://www.cs.utexas.edu/~marijn/publications/cube.pdf)
 
-
 ### Machine Learning 
 
 Machine learning is a related branch of AI and theorem proving. The overlap is mostly in the direction of applying machine learning methods to help SAT solvers e.g.
 
 - SATzilla: Portfolio-based Algorithm Selection for SAT. Journal of Artificial Intelligence Research 32 (2008) 565-606. [paper](https://arxiv.org/abs/1111.2249)
 - Machine Learning for Automated Theorem Proving - A survey of recent work [paper](https://ieeexplore.ieee.org/document/9624176)
+
+
 
 ## Other Resources
 
