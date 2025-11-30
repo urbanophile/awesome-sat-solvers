@@ -29,9 +29,10 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
   - [Machine Learning](#machine-learning) 
 - [Other Resources](#other-resources)
   - [Handbook of SAT](#handbook)
+  - [Applications](#applications)
   - [Books](#books)
   - [Competitions](#competitions)
-  - [Benchmark Problems](#benchmark-problems)
+  - [Benchmarks and Problems](#benchmark-problems)
 
 
 
@@ -68,7 +69,7 @@ This is a curated collection of resources for the Boolean Satisfiability Problem
 ## SAT Solvers
 SAT has a nice tradition of making solver public and open source. As Yogi Berra said "You can observe a lot by watchin". 
 
-### important solvers
+### Important Solvers
 Three very important whose source code is informative to read are GRASP, Chaff and MiniSAT. These are important or (historical) state of the art solvers.
 
 - WalkSAT (1994) - local search - [code](https://gitlab.com/HenryKautz/Walksat) | [project page](https://henrykautz.com/walksat/index.html)
@@ -180,6 +181,7 @@ CSP solvers include:
 Solvers include:
 - CBC [code](https://github.com/coin-or/Cbc)
 - SCIP [project](https://scipopt.org/)
+- HiGHS [project](https://highs.dev/) [code](https://github.com/ERGO-Code/HiGHS)
 
 
 
@@ -202,6 +204,12 @@ Many complex problems can be solved by compiling the problem into a SAT encoding
 ### Verification of proofs
 
 - [DRAT-Trim](https://github.com/marijnheule/drat-trim) - verifier of proofs of unsatisfiability (UNSAT)
+
+### Configuration of Solvers
+- SpySMAC [code](https://github.com/sfalkner/SpySMAC)
+- SMAC Bayesian Hyperparameter optimisation [code](https://github.com/automl/SMAC3)
+
+
 
 ## Research
 There is a vast literature on SAT.
@@ -269,12 +277,16 @@ The handbook of SAT is an excellent and comprehensive resources.
   -  [CH 8 Fundaments of Branching Heuristics](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=027282e993a97cad07797a980c32b0bc83f61989)
   -  [CH 9 Preprocessing in SAT Solving  (2nd Ed.)](https://cca.informatik.uni-freiburg.de/papers/BiereJarvisaloKiesl-SAT-Handbook-2021-Preprocessing-Chapter-Manuscript.pdf)
   -  [CH 10 Random Satisfiability (2nd Ed.)](https://cgi.di.uoa.gr/~optas/papers/handbook.pdf)
+  -  [CH 12 Automated Configuration and Selection of SAT Solvers (2nd Ed.)](https://www.cs.ubc.ca/~kevinlb/papers/2021-SAT-handbook-chapter.pdf)
   -  [CH 14 Bound Model Checking (1st Ed.)](https://www.satassociation.org/articles/FAIA185-0457.pdf)
   -  [CH 15 Proofs of Unsatisfiability (2nd Ed.)](https://www.cs.cmu.edu/~mheule/publications/p01c15-prf.pdf)
   -  [CH 19 Planning and SAT](https://users.aalto.fi/~rintanj1/papers/p02c19-pla.pdf)
   -  [CH 23 MaxSAT, Hard and Soft Constraints (2nd Ed.)](https://www.iiia.csic.es/media/filer_public/eb/1c/eb1c1fff-ecb8-4279-aa51-810cb5f3dbc8/p02c23-max.pdf)
   -  [CH -2 SMT (1st Ed.)](https://homepage.cs.uiowa.edu/~tinelli/papers/BarSST-09.pdf)
 
+### Applications
+
+- The magic of dependency resolution Adolfo Ochagavía [link](https://ochagavia.nl/blog/the-magic-of-dependency-resolution/)
 
 ### Books 
 
@@ -293,8 +305,10 @@ The handbook of SAT is an excellent and comprehensive resources.
 - QBF competition (more irregular) [link](https://qbf23.pages.sai.jku.at/gallery/)
 - Other research competitions [link](https://www.hsu-hh.de/logistik/research/challenges)
 
-### Benchmark Problems
+### Benchmarks and Problems
 
 - [‘SATLIB - Benchmark Problems’](https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html)
 - Original 1992 DIMACS workshop problems [ftp site](http://archive.dimacs.rutgers.edu/pub/challenge/sat/benchmarks/)
+- SAT Competition Results [2025](https://satcompetition.github.io/2025/results.html)) [2024](https://satcompetition.github.io/2024/results.html) [2023](https://satcompetition.github.io/2023/results.html) 
 - Historic SAT benchmark database [website](https://benchmark-database.de/) | [paper](https://abiteboul.com/gemoReports/GemoReport-355.pdf)
+- Active learning for SAT Solver benchmarking [repo](https://github.com/mathefuchs/al-for-sat-solver-benchmarking)
